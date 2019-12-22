@@ -1,0 +1,122 @@
+/* please use this file for your own styles 
+ * it's need for easiest update of newest wersions
+*/
+#popupa {
+    color: #08C;
+    width: 100%;
+}
+#popupa:hover {
+    color: rgb(68, 163, 195);
+    width: 100%;
+}
+.notification {
+    font-size: medium;
+    font-weight: bold;
+    color: #428BCA;
+    margin-bottom: 0;
+}
+
+.body .navigation .sub li a.agreen {
+    color: green;
+    font-size: large;
+}
+
+.body .navigation .sub li a.agreen:hover {
+    color: lawngreen;
+    font-size: large;
+}
+
+.body .navigation .sub li a.apurple {
+    color: purple;
+    font-size: large;
+}
+
+.body .navigation .sub li a.apurple:hover {
+    color: mediumpurple;
+    font-size: large;
+}
+
+.body .navigation .sub li a.ayellow {
+    color: darkgoldenrod;
+    font-size: large;
+}
+
+.body .navigation .sub li a.ayellow:hover {
+    color: gold;
+    font-size: large;
+}
+
+.body .navigation .sub li a.ablue {
+    color: blue;
+    font-size: large;
+}
+
+.body .navigation .sub li a.ablue:hover {
+    color: steelblue;
+    font-size: large;
+}
+
+.parametro-label {
+    color: burlywood;
+    font-size: medium;
+    display: inline;
+}
+
+.parametro-data {
+    color: orangered;
+    font-size: larger;
+    display: inline;
+}
+
+.message-info {
+    border: 1px solid;
+    clear: both;
+    padding: 10px 20px;
+}
+
+.message-error {
+    clear: both;
+    color: #e80c4d;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 20px 0 10px 0;
+}
+
+.message-success {
+    color: #7ac0da;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 20px 0 10px 0;
+}
+
+.error {
+    color: #e80c4d;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #e80c4d;
+    font-weight: bold;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #e80c4d;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #e80c4d;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.validation-summary-valid {
+    display: none;
+}
