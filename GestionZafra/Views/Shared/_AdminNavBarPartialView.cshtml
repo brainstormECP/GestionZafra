@@ -1,0 +1,85 @@
+﻿<nav class="navbar">
+    <ul class="navigation">
+        <li>
+            <a href="/" class="button">
+                <div class="icon">
+                    <span class="ico-monitor"></span>
+                </div>
+                <div class="name">Inicio</div>
+            </a>
+        </li>
+        <li>
+            <a href="/ParametrosGenerales" class="button red">
+                <div class="icon">
+                    <span class="ico-chart-4"></span>
+                </div>
+                <div class="name">Parametros</div>
+            </a>
+        </li>
+        <li>
+            <a href="/Zafras" class="button orange">
+                <div class="icon">
+                    <span class="ico-chart-4"></span>
+                </div>
+                <div class="name">Zafras</div>
+            </a>
+        </li>
+        <li>
+            <a href="/Usuario" class="button yellow">
+                <div class="icon">
+                    <span class="ico-cog-2"></span>
+                </div>
+                <div class="name">Usuarios</div>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="button green">
+                <div class="arrow"></div>
+                <div class="icon">
+                    <span class="ico-pen-2"></span>
+                </div>
+                <div class="name">Equipo</div>
+            </a>
+            <ul class="sub">
+                <li>@Html.ActionLink("Tipo de Equipos", "Index", "TipoEquipos",null,new {Class="agreen"})</li>
+                <li>@Html.ActionLink("Estado de Equipos", "Index", "EstadoEquipo",null,new {Class="agreen"})</li>
+                <li>@Html.ActionLink("Marca de Combinadas", "Index", "MarcasCombinadas",null,new {Class="agreen"})</li>
+            </ul>
+        </li>
+        <li>
+            <a href="#" class="button purple">
+                <div class="arrow"></div>
+                <div class="icon">
+                    <span class="ico-box"></span>
+                </div>
+                <div class="name">Campo</div>
+            </a>
+            <ul class="sub">
+                <li>@Html.ActionLink("Variedad de Caña", "Index", "VariedadCana",null,new {Class="apurple"})</li>
+                <li>@Html.ActionLink("Tipo de Sector de Propiedad", "Index", "TiposSectorPropiedad",null,new {Class="apurple"})</li>
+            </ul>
+        </li>
+        <li>
+            <div class="user">
+                @Html.Partial("_LoginPartial")
+            </div>
+            <div class="buttons">
+                <div class="sbutton green navButton">
+                    <a href="#"><span class="ico-align-justify"></span></a>
+                </div>
+                <div class="sbutton blue">
+                    <a href="#"><span class="ico-cogs"></span></a>
+                    <div class="popup">
+                        <div class="arrow"></div>
+                        <div class="row-fluid">
+                            <div class="row-form">
+                                @Html.ActionLink("Cerrar Sesión", "LogOff", "Account",null,new{Id="popupa"})
+                                @Html.ActionLink("Cambiar Contraseña", "ChangePassword", "Account",null,new{Id="popupa"})
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</nav>

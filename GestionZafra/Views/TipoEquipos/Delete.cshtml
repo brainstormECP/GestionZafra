@@ -1,0 +1,26 @@
+﻿@model GestionZafra.Models.TipoEquipos
+
+@{
+    ViewBag.Title = "Eliminar";
+}
+<h3>Esta seguro que desea eliminar este Tipo de Equipo?</h3>
+<div class="span5">
+    <fieldset class="data-fluid">
+        <legend>Tipo de Equipos</legend>
+
+        <div class="row-form">
+            @Html.DisplayNameFor(model => model.descripcionEquipo):
+        <div class="label label-warning">
+            @Html.DisplayFor(model => model.descripcionEquipo)
+        </div>
+        </div>
+    </fieldset>
+
+    @using (Html.BeginForm())
+    {
+        <div class="toolbar bottom tar">
+            @Html.ActionLink("Lista de Tipo de Equipos", "Index",null,new{Class="btn"})
+            <input class="btn btn-danger" type="submit" value="Eliminar" />
+        </div> 
+    }
+</div>

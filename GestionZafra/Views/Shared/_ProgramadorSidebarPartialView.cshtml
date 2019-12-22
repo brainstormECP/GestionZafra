@@ -1,0 +1,44 @@
+﻿<div class="sidebar">
+    <div class="top">
+        @Html.ActionLink(" ", "Index", "Home", null, new { Class = "logo" })
+        @Html.Partial("_ParametrosPartial")
+    </div>
+    <div class="nContainer">
+        <ul class="navigation">
+            <li class="active">@Html.ActionLink("Inicio", "Index", "Home", null, new { Class = "blblue" })</li>
+            <li>
+                <a href="#" class="blgreen">Combinadas</a>
+                <div class="open"></div>
+                <ul>
+                    <li>@Html.ActionLink("Peloton de Combinadas", "Index", "PelotonCombinadas")</li>
+                    <li>@Html.ActionLink("Operadores de Combinadas", "Index", "OperadorCombinada")</li>
+                    <li>@Html.ActionLink("Plan de Operadores de Combinadas", "Index", "PlanOperadoresCombinadas")</li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="bldblue">Suministradores</a>
+                <div class="open"></div>
+                <ul>
+                    <li>@Html.ActionLink("Suministradores", "Index", "Suministradores")</li>
+                    <li>@Html.ActionLink("Campo", "Index", "Campo")</li>
+                    <li>@Html.ActionLink("Centros de Recepcion", "Index", "CentrosRecepcion")</li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="blpurple">Equipos Zafra</a>
+                <div class="open"></div>
+                <ul>
+                    <li>@Html.ActionLink("Parque de Equipos", "Index", "ParqueEquipos")</li>
+                    <li>@Html.ActionLink("Plan de Equipos de Zafra", "Index", "PlanEquiposAgricZafra")</li>
+                </ul>
+            </li>
+            <li>@Html.ActionLink("Reportes", "Index", "Reportes", null, new { Class = "blred" })</li>
+        </ul>
+        <a class="close">
+            <span class="ico-remove"></span>
+        </a>
+    </div>
+    <div>
+        <p id="porgusto"></p>
+    </div>
+</div>

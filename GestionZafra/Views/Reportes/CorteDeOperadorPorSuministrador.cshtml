@@ -1,0 +1,41 @@
+﻿@model GestionZafra.Models.ParametrosFechaReporteModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Diario Eq Zafra";
+    ViewBag.Message = "Diario de Equipos de Zafra";
+}
+
+<div class="span5">
+    @using (Html.BeginForm("CorteDeOperadorPorSuministrador", "Reportes", FormMethod.Post))
+    {
+        @Html.ValidationSummary(true)
+
+        <fieldset class="data-fluid">
+            <legend>Diario de Equipos de Zafra</legend>
+
+            <div class="row-form">
+                @Html.LabelFor(model => model.FechaInicio)
+            </div>
+            <div class="row-form">
+                @Html.TextBoxFor(model => model.FechaInicio, new { Class= "datepicker"})
+                @Html.ValidationMessageFor(model => model.FechaInicio)
+            </div>
+
+            <div class="row-form">
+                @Html.LabelFor(model => model.FechaFin)
+            </div>
+            <div class="row-form">
+                @Html.TextBoxFor(model => model.FechaFin, new { Class= "datepicker"})
+                @Html.ValidationMessageFor(model => model.FechaFin)
+            </div>
+
+            <div class="toolbar bottom tar">
+                <input class="btn" type="submit" value="Buscar" />
+            </div>
+        </fieldset>
+    }
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

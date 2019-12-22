@@ -1,0 +1,32 @@
+﻿@model GestionZafra.Models.EstadoEquipo
+
+@{
+    ViewBag.Title = "Editar";
+}
+<div class="span5">
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+
+        <fieldset class="data-fluid">
+            <legend>Estados de Equipo</legend>
+
+            @Html.HiddenFor(model => model.id)
+
+            <div class="row-form">
+                @Html.LabelFor(model => model.nombreEstado)
+            </div>
+            <div class="row-form">
+                @Html.EditorFor(model => model.nombreEstado)
+                @Html.ValidationMessageFor(model => model.nombreEstado)
+            </div>
+            <div class="toolbar bottom tar">
+                 @Html.ActionLink("Lista de Estados de Equipo", "Index",null,new{Class="btn"})
+                <input class="btn btn-success" type="submit" value="Guardar" />
+            </div>
+        </fieldset>
+    }
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

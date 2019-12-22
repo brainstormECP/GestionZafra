@@ -1,0 +1,41 @@
+﻿@model GestionZafra.Models.Zafras
+
+@{
+    ViewBag.Title = "Iniciar Zafra";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="span5">
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+
+        <fieldset class="data-fluid">
+            <legend>Datos de nueva Zafra</legend>
+
+            <div class="row-form">
+                @Html.LabelFor(model => model.descripcionZafra)
+            </div>
+            <div class="row-form">
+                @Html.EditorFor(model => model.descripcionZafra)
+                @Html.ValidationMessageFor(model => model.descripcionZafra)
+            </div>
+
+            <div class="row-form">
+                @Html.LabelFor(model => model.fechaInicio)
+            </div>
+            <div class="row-form">
+                @Html.TextBoxFor(model => model.fechaInicio, new { Class = "datepicker" })
+                @Html.ValidationMessageFor(model => model.fechaInicio)
+            </div>
+            @Html.HiddenFor(model => model.fechaFin)
+
+            <div class="toolbar bottom tar">
+                @Html.ActionLink("Atras","Index","Home",null,new{Class= "btn"})
+                <input class="btn btn-success" type="submit" value="Nueva Zafra" />
+            </div>
+        </fieldset>
+    }
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,26 @@
+﻿@model GestionZafra.Models.VariedadCana
+
+@{
+    ViewBag.Title = "Eliminar";
+}
+<h3>Esta seguro que desea eliminar esta Variedad de Caña?</h3>
+<div class="span5">
+    <fieldset class="data-fluid">
+        <legend>Variedad de Caña</legend>
+
+        <div class="row-form">
+            @Html.DisplayNameFor(model => model.nombreVariedad):
+         <div class="label label-warning">
+             @Html.DisplayFor(model => model.nombreVariedad)
+         </div>
+        </div>
+
+    </fieldset>
+    @using (Html.BeginForm())
+    {
+        <div class="toolbar bottom tar">
+            @Html.ActionLink("Lista de Variedades de Caña", "Index",null,new{Class="btn"})
+            <input class="btn btn-danger" type="submit" value="Eliminar" />
+        </div>
+    }
+</div>

@@ -1,0 +1,68 @@
+﻿@model GestionZafra.Models.DiarioEquiposZafra
+
+@{
+    ViewBag.Title = "Eliminar";
+}
+<h3>Esta seguro que quiere eliminar este Diario de Equipos de Zafra?</h3>
+<div class="span5">
+    <fieldset class="data-fluid">
+        <legend>Diario de Equipos de Zafra</legend>
+
+        <div class="row-form">
+            @Html.DisplayNameFor(model => model.PlanEquiposAgricZafra):
+        <div class="label label-warning">
+            @Html.DisplayFor(model => model.PlanEquiposAgricZafra.ParqueEquipos.Suministradores.TiposSectorPropiedad.nombreTipoSector)
+            @Html.DisplayFor(model => model.PlanEquiposAgricZafra.ParqueEquipos.Suministradores.nombreSuministrador)
+            @Html.DisplayFor(model => model.PlanEquiposAgricZafra.CentrosRecepcion.nombreCentroRecepcion)
+        </div>
+        </div>
+
+
+        <div class="row-form">
+            @Html.DisplayNameFor(model => model.fecha):
+        <div class="label label-warning">
+            @Html.DisplayFor(model => model.fecha)
+        </div>
+        </div>
+
+
+        <div class="row-form">
+            @Html.DisplayNameFor(model => model.arrobasTiradas):
+        <div class="label label-warning">
+            @Html.DisplayFor(model => model.arrobasTiradas) @@
+        </div>
+        </div>
+
+
+        <div class="row-form">
+            @Html.DisplayNameFor(model => model.parqueParado):
+        <div class="label label-warning">
+            @Html.DisplayFor(model => model.parqueParado)
+        </div>
+        </div>
+
+
+        <div class="row-form">
+            @Html.DisplayNameFor(model => model.Usuario.nombreUsuario):
+        <div class="label label-warning">
+            @Html.DisplayFor(model => model.Usuario.nombreUsuario)
+        </div>
+        </div>
+
+
+        <div class="row-form">
+            @Html.DisplayNameFor(model => model.Zafras.descripcionZafra):
+         <div class="label label-warning">
+             @Html.DisplayFor(model => model.Zafras.descripcionZafra)
+         </div>
+        </div>
+
+    </fieldset>
+    @using (Html.BeginForm())
+    {
+        <div class="toolbar bottom tar">
+            @Html.ActionLink("Lista de Diarios de Equipo de Zafra", "Index",null,new{Class="btn"})
+            <input class="btn btn-danger" type="submit" value="Eliminar" />
+        </div>
+    }
+</div>

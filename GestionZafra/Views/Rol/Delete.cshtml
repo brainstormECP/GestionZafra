@@ -1,0 +1,29 @@
+﻿@model GestionZafra.Models.Rol
+
+@{
+    ViewBag.Title = "Eliminar";
+}
+
+<h2>Eliminar</h2>
+
+<h3>Esta seguro que quiere eliminar este Rol?</h3>
+<div class="span5">
+    <fieldset class="data-fluid">
+        <legend>Rol</legend>
+
+        <div class="row-form">
+            @Html.DisplayNameFor(model => model.descripcionRol):
+        <div class="label label-warning">
+            @Html.DisplayFor(model => model.descripcionRol)
+        </div>
+        </div>
+
+    </fieldset>
+    @using (Html.BeginForm())
+    {
+        <div class="toolbar bottom tar">
+            <input class="btn btn-danger" type="submit" value="Eliminar" />
+        </div>
+        @Html.ActionLink("Lista de Roles", "Index")
+    }
+</div>

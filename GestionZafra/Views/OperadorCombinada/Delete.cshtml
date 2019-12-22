@@ -1,0 +1,43 @@
+﻿@model GestionZafra.Models.OperadorCombinada
+
+@{
+    ViewBag.Title = "Eliminar";
+}
+
+<h3>Esta seguro que quiere eliminar este operador de Combinada?</h3>
+<div class="span5">
+    <fieldset class="data-fluid">
+        <legend>Operador de Combinada</legend>
+
+        <div class="row-form">
+            @Html.DisplayNameFor(model => model.nombreOperador):
+                  <div class="label label-warning">
+                      @Html.DisplayFor(model => model.nombreOperador)
+                  </div>
+        </div>
+
+
+        <div class="row-form">
+            @Html.DisplayNameFor(model => model.MarcasCombinadas.nombreCombinada):
+                  <div class="label label-warning">
+                      @Html.DisplayFor(model => model.MarcasCombinadas.nombreCombinada)
+                  </div>
+        </div>
+
+
+        <div class="row-form">
+            @Html.DisplayNameFor(model => model.PelotonCombinadas.id):
+                  <div class="label label-warning">
+                      @Html.DisplayFor(model => model.PelotonCombinadas.id)
+                  </div>
+        </div>
+
+    </fieldset>
+    @using (Html.BeginForm())
+    {
+        <div class="toolbar bottom tar">
+            @Html.ActionLink("Lista de Operadores de Combinada", "Index",null,new{Class="btn"})
+            <input class="btn btn-danger" type="submit" value="Eliminar" />
+        </div>
+    }
+</div>

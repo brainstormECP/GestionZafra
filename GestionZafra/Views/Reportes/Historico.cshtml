@@ -1,0 +1,97 @@
+﻿@model GestionZafra.Models.HistoricoModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Historico";
+    ViewBag.Message = "Historico Zafras Anteriores";
+}
+
+<div class="span5">
+    @using (Html.BeginForm("Historico", "Reportes", FormMethod.Post))
+    {
+        @Html.ValidationSummary(true)
+
+        <fieldset class="data-fluid">
+            <legend>Historico</legend>
+
+            <div class="row-form">
+                @Html.LabelFor(model => model.Reporte)
+            </div>
+            <div class="row-form">
+                @Html.DropDownList("Reporte")
+                @Html.ValidationMessageFor(model => model.Reporte)
+            </div>
+
+            <div class="row-form">
+                @Html.LabelFor(model => model.Zafraid)
+            </div>
+            <div class="row-form">
+                @Html.DropDownList("Zafraid")
+                @Html.ValidationMessageFor(model => model.Zafraid)
+            </div>
+            <div id="ocultarFechaInicio">
+                <div class="row-form">
+                    @Html.LabelFor(model => model.FechaInicio)
+                </div>
+                <div class="row-form">
+                    @Html.TextBoxFor(model => model.FechaInicio, new { Class = "datepicker" })
+                    @Html.ValidationMessageFor(model => model.FechaInicio)
+                </div>
+            </div>
+            <div id="ocultarFechaFin">
+                <div class="row-form">
+                    @Html.LabelFor(model => model.FechaFin)
+                </div>
+                <div class="row-form">
+                    @Html.TextBoxFor(model => model.FechaFin, new { Class = "datepicker" })
+                    @Html.ValidationMessageFor(model => model.FechaFin)
+                </div>
+            </div>
+            <div class="toolbar bottom tar">
+                <input class="btn" type="submit" value="Buscar" />
+            </div>
+        </fieldset>
+    }
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script>
+        $(document).ready(function () {
+            $("#Reporte option").click(function () {
+                if ($(this).html() == "Caña por Equipos") {
+                    $("#ocultarFechaInicio").show();
+                    $("#ocultarFechaFin").show();
+                }
+                if ($(this).html() == "Caña por Operadores") {
+                    $("#ocultarFechaInicio").show();
+                    $("#ocultarFechaFin").show();
+                }
+                if ($(this).html() == "Recibida por Centros") {
+                    $("#ocultarFechaInicio").show();
+                    $("#ocultarFechaFin").show();
+                }
+                if ($(this).html() == "Unidades Incumplidoras del Corte") {
+                    $("#ocultarFechaInicio").hide();
+                    $("#ocultarFechaFin").hide();
+                }
+                if ($(this).html() == "Unidades Cumplidoras del Corte") {
+                    $("#ocultarFechaInicio").hide();
+                    $("#ocultarFechaFin").hide();
+                }
+                if ($(this).html() == "Operadores Incumplidores") {
+                    $("#ocultarFechaInicio").hide();
+                    $("#ocultarFechaFin").hide();
+                }
+                if ($(this).html() == "Operadores Cumplidores") {
+                    $("#ocultarFechaInicio").hide();
+                    $("#ocultarFechaFin").hide();
+                }
+                if ($(this).html() == "Equipos Parados") {
+                    $("#ocultarFechaInicio").show();
+                    $("#ocultarFechaFin").hide();
+                }
+            });
+        });
+    </script>
+}

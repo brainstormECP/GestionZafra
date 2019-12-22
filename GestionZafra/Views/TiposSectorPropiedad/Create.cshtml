@@ -1,0 +1,30 @@
+﻿@model GestionZafra.Models.TiposSectorPropiedad
+
+@{
+    ViewBag.Title = "Nuevo";
+}
+<div class="span5">
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+
+        <fieldset class="data-fluid">
+            <legend>Tipo de Sectores de Propiedad</legend>
+
+            <div class="row-form">
+                @Html.LabelFor(model => model.nombreTipoSector)
+            </div>
+            <div class="row-form">
+                @Html.EditorFor(model => model.nombreTipoSector)
+                @Html.ValidationMessageFor(model => model.nombreTipoSector)
+            </div>
+            <div class="toolbar bottom tar">
+                @Html.ActionLink("Lista de Tipo de Sectores de Propiedad", "Index",null,new{Class="btn"})
+                <input class="btn btn-success" type="submit" value="Nueva" />
+            </div>
+        </fieldset>
+    }
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

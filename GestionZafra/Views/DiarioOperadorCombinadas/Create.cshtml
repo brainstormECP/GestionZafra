@@ -1,0 +1,87 @@
+﻿@model GestionZafra.Models.DiarioOperadorCombinadas
+
+@{
+    ViewBag.Title = "Nuevo";
+}
+
+<div class="span5">
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+
+        <fieldset class="data-fluid">
+            <legend>Diario de Operador de Combinadas</legend>
+
+            <div class="row-form">
+                @Html.LabelFor(model => model.PlanOperadoresCombinadasid, "Plan")
+            </div>
+            <div class="row-form">
+                @Html.DropDownList("PlanOperadoresCombinadasid")
+                @Html.ValidationMessageFor(model => model.PlanOperadoresCombinadasid)
+            </div>
+
+            <div class="row-form">
+                @Html.LabelFor(model => model.Campoid, "Campo")
+            </div>
+            <div class="row-form">
+                @Html.DropDownList("Campoid")
+                @Html.ValidationMessageFor(model => model.Campoid)
+            </div>
+
+            <div class="row-form">
+                @Html.LabelFor(model => model.EstadoEquipoid, "EstadoEquipo")
+            </div>
+            <div class="row-form">
+                @Html.DropDownList("EstadoEquipoid")
+                @Html.ValidationMessageFor(model => model.EstadoEquipoid)
+            </div>
+
+            <div class="row-form">
+                @Html.LabelFor(model => model.cantQuemada)
+            </div>
+            <div class="row-form">
+                <div class="input-append">
+                    @Html.EditorFor(model => model.cantQuemada)
+                    <span class="add-on blue">
+                        <i class="icon-white">@@</i>
+                    </span>
+                </div>
+                @Html.ValidationMessageFor(model => model.cantQuemada)
+            </div>
+
+            <div class="row-form">
+                @Html.LabelFor(model => model.cantQuemadaProgram)
+            </div>
+            <div class="row-form">
+                <div class="input-append">
+                    @Html.EditorFor(model => model.cantQuemadaProgram)
+                    <span class="add-on blue">
+                        <i class="icon-white">@@</i>
+                    </span>
+                </div>
+                @Html.ValidationMessageFor(model => model.cantQuemadaProgram)
+            </div>
+
+            <div class="row-form">
+                @Html.LabelFor(model => model.cantVerde)
+            </div>
+            <div class="row-form">
+                <div class="input-append">
+                    @Html.EditorFor(model => model.cantVerde)
+                    <span class="add-on blue">
+                        <i class="icon-white">@@</i>
+                    </span>
+                </div>
+                @Html.ValidationMessageFor(model => model.cantVerde)
+            </div>
+            <div class="toolbar bottom tar">
+                @Html.ActionLink("Atras", "Index",null,new{Class="btn"})
+                <input class="btn btn-success" type="submit" value="Nuevo" />
+            </div>
+        </fieldset>
+    }
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

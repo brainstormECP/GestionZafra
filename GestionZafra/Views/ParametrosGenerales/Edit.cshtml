@@ -1,0 +1,54 @@
+﻿@model GestionZafra.Models.ParametrosGenerales
+
+@{
+    ViewBag.Title = "Editar Parametros";
+}
+<div class="span5">
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+
+        <fieldset class="data-fluid">
+            <legend>Parametros Generales</legend>
+            
+            <div class="row-form">
+                @Html.LabelFor(model => model.codigoEmpresa)
+            </div>
+            <div class="row-form">
+                @Html.HiddenFor(model => model.codigoEmpresa)
+                @Html.DisplayFor(model => model.codigoEmpresa)
+            </div>
+
+            <div class="row-form">
+                @Html.LabelFor(model => model.nombreEmpresa)
+            </div>
+            <div class="row-form">
+                @Html.EditorFor(model => model.nombreEmpresa)
+                @Html.ValidationMessageFor(model => model.nombreEmpresa)
+            </div>
+
+            <div class="row-form">
+                @Html.LabelFor(model => model.fechaActual)
+            </div>
+            <div class="row-form">
+                @Html.TextBoxFor(model => model.fechaActual, new { Class = "datepicker", Value = Model.fechaActual.ToShortDateString() })
+                @Html.ValidationMessageFor(model => model.fechaActual)
+            </div>
+
+            <div class="row-form">
+                @Html.LabelFor(model => model.zafraAct, "Zafras")
+            </div>
+            <div class="row-form">
+                @Html.DropDownList("zafraAct")
+                @Html.ValidationMessageFor(model => model.zafraAct)
+            </div>
+            <div class="toolbar bottom tar">
+                @Html.ActionLink("Atras", "Index",null,new {Class = "btn"})
+                <input class="btn btn-success" type="submit" value="Guardar" />
+            </div>
+        </fieldset>
+    }
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

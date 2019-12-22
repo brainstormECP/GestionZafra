@@ -1,0 +1,63 @@
+﻿@model IEnumerable<GestionZafra.Models.ParametrosGenerales>
+
+@{
+    ViewBag.Title = "Parametros Generales";
+    ViewBag.Message = "Parametros Generales";
+}
+
+<div class="content">
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="block">
+                <div class="head dblue">
+                    <div class="icon"><span class="ico-layout-9"></span></div>
+                </div>
+                <div class="data-fluid">
+                    <table class="table" cellpadding="0" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.codigoEmpresa)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.nombreEmpresa)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.fechaActual)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Zafras.descripcionZafra)
+                                </th>
+                                <th width="80" class="TAC">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.codigoEmpresa)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.nombreEmpresa)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.fechaActual)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Zafras.descripcionZafra)
+                                    </td>
+                                    <td>
+                                        <a href="@Url.Action("Edit","ParametrosGenerales")/@item.codigoEmpresa" class="button green">
+                                            <div class="icon"><span class="ico-pencil"></span></div>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

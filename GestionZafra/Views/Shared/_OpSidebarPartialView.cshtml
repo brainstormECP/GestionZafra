@@ -1,0 +1,31 @@
+﻿<div class="sidebar">
+    <div class="top">
+        @Html.ActionLink(" ", "Index", "Home", null, new { Class = "logo" })
+        @Html.Partial("_ParametrosPartial")
+    </div>
+    <div class="nContainer">
+        <ul class="navigation">
+            <li class="active">@Html.ActionLink("Inicio", "Index", "Home", null, new { Class = "blblue" })</li>
+            <li>
+                <a href="#" class="blyellow">Cierre/Inicio</a>
+                <div class="open"></div>
+                <ul>
+                    <li>@Html.ActionLink("Cerrar Día", "CerrarDia", "Cierre")</li>
+                    <li>@Html.ActionLink("Iniciar Zafra", "IniciarZafra", "Cierre")</li>
+                    <li>@Html.ActionLink("Finalizar Zafra", "FinalizarZafra", "Cierre")</li>
+                </ul>
+            </li>
+            <li>@Html.ActionLink("Diario de Operadores de Combinadas", "Index", "DiarioOperadorCombinadas", null, new { Class = "blgreen" })</li>
+
+            <li>@Html.ActionLink("Diario de Equipos de Zafra", "Index", "DiarioEquiposZafra", null, new { Class = "blpurple" })</li>
+
+            <li>@Html.ActionLink("Reportes", "Index", "Reportes", null, new { Class = "blred" })</li>
+        </ul>
+        <a class="close">
+            <span class="ico-remove"></span>
+        </a>
+    </div>
+    <div>
+        <p id="porgusto"></p>
+    </div>
+</div>

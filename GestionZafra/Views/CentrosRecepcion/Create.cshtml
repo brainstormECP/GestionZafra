@@ -1,0 +1,30 @@
+﻿@model GestionZafra.Models.CentrosRecepcion
+
+@{
+    ViewBag.Title = "Nuevo";
+}
+<div class="span5">
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+
+        <fieldset class="data-fluid">
+            <legend>Centros de Recepcion</legend>
+
+            <div class="row-form">
+                @Html.LabelFor(model => model.nombreCentroRecepcion)
+            </div>
+            <div class="row-form">
+                @Html.EditorFor(model => model.nombreCentroRecepcion)
+                @Html.ValidationMessageFor(model => model.nombreCentroRecepcion)
+            </div>
+            <div class="toolbar bottom tar">
+                @Html.ActionLink("Lista de Centros de Recepcion", "Index",null,new{Class="btn"})
+                <input class="btn btn-success" type="submit" value="Nuevo" />
+            </div>
+        </fieldset>
+    }
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

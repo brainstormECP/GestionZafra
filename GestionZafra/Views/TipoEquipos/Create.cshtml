@@ -1,0 +1,30 @@
+﻿@model GestionZafra.Models.TipoEquipos
+
+@{
+    ViewBag.Title = "Nuevo Tipo de Equipo";
+}
+<div class="span5">
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+
+        <fieldset class="data-fluid">
+            <legend>Tipo de Equipos</legend>
+
+            <div class="row-form">
+                @Html.LabelFor(model => model.descripcionEquipo)
+            </div>
+            <div class="row-form">
+                @Html.EditorFor(model => model.descripcionEquipo)
+                @Html.ValidationMessageFor(model => model.descripcionEquipo)
+            </div>
+            <div class="toolbar bottom tar">
+                @Html.ActionLink("Lista de Tipo de Equipos", "Index",null,new{Class = "btn"})
+                <input class="btn btn-success" type="submit" value="Nueva" />
+            </div>
+        </fieldset>
+    }
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

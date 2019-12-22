@@ -1,0 +1,36 @@
+﻿@model GestionZafra.Models.Rol
+
+@{
+    ViewBag.Title = "Nuevo Rol";
+}
+
+<h2>Nuevo</h2>
+
+<div class="span5">
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+
+        <fieldset class="data-fluid">
+            <legend>Rol</legend>
+
+            <div class="row-form">
+                @Html.LabelFor(model => model.descripcionRol)
+            </div>
+            <div class="row-form">
+                @Html.EditorFor(model => model.descripcionRol)
+                @Html.ValidationMessageFor(model => model.descripcionRol)
+            </div>
+            <div class="toolbar bottom tar">
+                <input class="btn" type="submit" value="Nueva" />
+            </div>
+        </fieldset>
+    }
+
+    <div>
+        @Html.ActionLink("Lista de Roles", "Index")
+    </div>
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

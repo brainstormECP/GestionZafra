@@ -1,0 +1,223 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Reportes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row-fluid">
+    <div class="span4">
+        <div class="block">
+            <div class="head blue">
+                <div class="icon">
+                    <i class="ico-grid"></i>
+                </div>
+                <h2>Caña Tirada por Equipos</h2>
+            </div>
+            <div class="data dark">
+                <p>
+                    Muestra la cantidad de caña tirada por los equipos, diferenciados por su tipo
+                y agrupados por la unidad a que pertenecen.
+                </p>
+                @Html.ActionLink("Ver reporte", "CanaPorEquipo", "Reportes")
+            </div>
+        </div>
+    </div>
+
+    <div class="span4">
+        <div class="block">
+            <div class="head red">
+                <div class="icon">
+                    <i class="ico-grid"></i>
+                </div>
+                <h2>Caña por Operadores</h2>
+            </div>
+            <div class="data dark">
+                <p>
+                    Muestra la cantidad de caña cortada por los operadores agrupados por Unidad Suministradora.
+                </p>
+                @Html.ActionLink("Ver reporte", "CanaPorOperador", "Reportes")
+            </div>
+        </div>
+    </div>
+
+    <div class="span4">
+        <div class="block">
+            <div class="head purple">
+                <div class="icon">
+                    <i class="ico-grid"></i>
+                </div>
+                <h2>Recibida por Centro</h2>
+            </div>
+            <div class="data dark">
+                <p>
+                    Muestra la cantidad de caña recibida por cada Centro de Recepción.
+                </p>
+                @Html.ActionLink("Ver reporte", "RecibidosCentrosRecepcion", "Reportes")
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row-fluid">
+    <div class="span4">
+        <div class="block">
+            <div class="head yellow">
+                <div class="icon">
+                    <i class="ico-grid"></i>
+                </div>
+                <h2>Unidades Incumplidoras</h2>
+            </div>
+            <div class="data dark">
+                <p>
+                    Muestra las unidades suministradores incumplidoras del plan de corte en la zafra actual.
+                </p>
+                @Html.ActionLink("Ver reporte", "UnidadesIncumplidoras", "Reportes")
+            </div>
+        </div>
+    </div>
+    
+    <div class="span4">
+        <div class="block">
+            <div class="head red">
+                <div class="icon">
+                    <i class="ico-grid"></i>
+                </div>
+                <h2>Unidades Cumplidoras</h2>
+            </div>
+            <div class="data dark">
+                <p>
+                    Muestra las unidades suministradores que cumplieron el plan de corte en la zafra actual.
+                </p>
+                @Html.ActionLink("Ver reporte", "UnidadesCumplidoras", "Reportes")
+            </div>
+        </div>
+    </div>
+
+    <div class="span4">
+        <div class="block">
+            <div class="head orange">
+                <div class="icon">
+                    <i class="ico-grid"></i>
+                </div>
+                <h2>Operadores Incumplidores</h2>
+            </div>
+            <div class="data dark">
+                <p>
+                    Muestra los operadores de combinadas incumplidores del plan de corte en la zafra actual.
+                </p>
+                @Html.ActionLink("Ver reporte", "OperadoresIncumplidores", "Reportes")
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row-fluid">
+    <div class="span4">
+        <div class="block">
+            <div class="head blue">
+                <div class="icon">
+                    <i class="ico-grid"></i>
+                </div>
+                <h2>Operadores Cumplidores</h2>
+            </div>
+            <div class="data dark">
+                <p>
+                    Muestra los operadores de combinadas que cumplieron el plan de corte en la zafra actual.
+                </p>
+                @Html.ActionLink("Ver reporte", "OperadoresCumplidores", "Reportes")
+            </div>
+        </div>
+    </div>
+
+    <div class="span4">
+        <div class="block">
+            <div class="head red">
+                <div class="icon">
+                    <i class="ico-grid"></i>
+                </div>
+                <h2>Equipos Rotos</h2>
+            </div>
+            <div class="data dark">
+                <p>
+                    Muestra la cantidad de equipos de zafra parados por Unidad Suministradora en el dia actual.
+                </p>
+                @Html.ActionLink("Ver reporte", "EquiposParados", "Reportes")
+            </div>
+        </div>
+    </div>
+    
+    <div class="span4">
+        <div class="block">
+            <div class="head orange">
+                <div class="icon">
+                    <i class="ico-grid"></i>
+                </div>
+                <h2>Equipos de Zafra</h2>
+            </div>
+            <div class="data dark">
+                <p>
+                    Muestra la cantidad de equipos agrupados por unidad suministradora y por tipo.
+                </p>
+                @Html.ActionLink("Ver reporte", "EquiposPorSuministrador", "Reportes")
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row-fluid">
+    <div class="span4">
+        <div class="block">
+            <div class="head blue">
+                <div class="icon">
+                    <i class="ico-grid"></i>
+                </div>
+                <h2>Campos</h2>
+            </div>
+            <div class="data dark">
+                <p>
+                    Muestra la cantidad de caña por campo, verde y quemada.
+                </p>
+                @Html.ActionLink("Ver reporte", "Campos", "Reportes")
+            </div>
+        </div>
+    </div>
+
+    <div class="span4">
+        <div class="block">
+            <div class="head red">
+                <div class="icon">
+                    <i class="ico-grid"></i>
+                </div>
+                <h2>Combinadas Rotas</h2>
+            </div>
+            <div class="data dark">
+                <p>
+                    Muestra la cantidad de combinadas paradas por Operador en el dia actual.
+                </p>
+                @Html.ActionLink("Ver reporte", "OperadoresParados", "Reportes")
+            </div>
+        </div>
+    </div>
+    
+    <div class="span4">
+        <div class="block">
+            <div class="head orange">
+                <div class="icon">
+                    <i class="ico-grid"></i>
+                </div>
+                <h2>Historico</h2>
+            </div>
+            <div class="data dark">
+                <p>
+                    Permite seleccionar la zafra de la se desea mostrar los Reportes.
+                </p>
+                @Html.ActionLink("Ver reporte", "Historico", "Reportes")
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,35 @@
+﻿<div class="sidebar">
+    <div class="top">
+        @Html.ActionLink(" ", "Index", "Home", null, new { Class = "logo" })
+        @Html.Partial("_ParametrosPartial")
+    </div>
+    <div class="nContainer">
+        <ul class="navigation">
+            <li class="active">@Html.ActionLink("Inicio", "Index", "Home", null, new { Class = "blblue" })</li>
+            <li>@Html.ActionLink("Parametros Generales", "Index", "ParametrosGenerales",null,new {Class="blred"})</li>
+            <li>@Html.ActionLink("Zafras", "Index", "Zafras",null,new {Class="blorange"})</li>
+            <li>@Html.ActionLink("Usuario", "Index", "Usuario",null,new {Class="blyellow"})</li>
+            <li>
+                <a href="#" class="blgreen">Equipo</a>
+                <div class="open"></div>
+                <ul>
+                    <li>@Html.ActionLink("Tipo de Equipos", "Index", "TipoEquipos")</li>
+                    <li>@Html.ActionLink("Estado de Equipos", "Index", "EstadoEquipo")</li>
+                    <li>@Html.ActionLink("Marca de Combinadas", "Index", "MarcasCombinadas")</li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="blpurple">Campo</a>
+                <div class="open"></div>
+                <ul>
+                    <li>@Html.ActionLink("Variedad de Caña", "Index", "VariedadCana")</li>
+                    <li>@Html.ActionLink("Tipo de Sector de Propiedad", "Index", "TiposSectorPropiedad")</li>
+                </ul>
+            </li>
+        </ul>
+        <a class="close">
+            <span class="ico-remove"></span>
+        </a>
+    </div>
+    <div><p  id="porgusto"></p></div>
+</div>

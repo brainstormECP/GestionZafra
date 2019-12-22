@@ -1,0 +1,54 @@
+﻿@model GestionZafra.Models.ParametrosGenerales
+
+@{
+    ViewBag.Title = "Nuevo";
+    ViewBag.Message = "Nuevo Parametro";
+}
+
+<div class="span5">
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+        <fieldset class="data-fluid">
+            <legend>Parametros Generales</legend>
+
+            <div class="row-form">
+                @Html.LabelFor(model => model.codigoEmpresa)
+            </div>
+            <div class="row-form">
+                @Html.TextBoxFor(model => model.codigoEmpresa)
+                @Html.ValidationMessageFor(model => model.codigoEmpresa)
+            </div>
+
+            <div class="row-form">
+                @Html.LabelFor(model => model.nombreEmpresa)
+            </div>
+            <div class="row-form">
+                @Html.EditorFor(model => model.nombreEmpresa)
+                @Html.ValidationMessageFor(model => model.nombreEmpresa)
+            </div>
+
+            <div class="row-form">
+                @Html.LabelFor(model => model.fechaActual)
+            </div>
+            <div class="row-form">
+                @Html.TextBoxFor(model => model.fechaActual, new { Class = "datepicker" })
+                @Html.ValidationMessageFor(model => model.fechaActual)
+            </div>
+
+            <div class="row-form">
+                @Html.LabelFor(model => model.zafraAct, "Zafras")
+            </div>
+            <div class="row-form">
+                @Html.DropDownList("zafraAct")
+                @Html.ValidationMessageFor(model => model.zafraAct)
+            </div>
+            <div class="toolbar bottom tar">
+                <input class="btn btn-success" type="submit" value="Nuevo" />
+            </div>
+        </fieldset>
+    }
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

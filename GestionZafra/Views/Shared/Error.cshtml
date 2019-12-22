@@ -1,0 +1,24 @@
+﻿@model System.Web.Mvc.HandleErrorInfo
+
+@{
+    Layout = "_BasicLayout.cshtml";
+    ViewBag.Title = "Error";
+}
+
+<div class="errorContainer">
+    <hgroup class="title">
+        <h1 class="error">Error.</h1>
+        <h2 class="error">Ocurrio un error en la solicitud que usted realizo.</h2>
+    </hgroup>
+    <div>
+        <p class="error">@Model.Exception.Message</p>
+        @* @{var messa = Model.Exception.InnerException != null?Model.Exception.InnerException.Message:" "}
+        <p class="error">@messa</p>*@
+        <div class="toolbar bottom tar">
+            @Html.ActionLink("Inicio", "Index","Home", null, new { Class = "btn btn-inverse" })
+            @*<input class="btn btn-inverse" type="submit" value="Guardar" />*@
+            @Html.ActionLink("Iniciar Sesión", "Login", "Account", null, new { Class = "btn" })
+        </div>
+
+    </div>
+</div>

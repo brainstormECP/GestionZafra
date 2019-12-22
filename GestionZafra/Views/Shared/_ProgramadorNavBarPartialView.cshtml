@@ -1,0 +1,83 @@
+﻿<nav class="navbar">
+    <ul class="navigation">
+        <li>
+            <a href="/" class="button">
+                <div class="icon">
+                    <span class="ico-monitor"></span>
+                </div>
+                <div class="name">Inicio</div>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="button green">
+                <div class="arrow"></div>
+                <div class="icon">
+                    <span class="ico-pen-2"></span>
+                </div>
+                <div class="name">Combinadas</div>
+            </a>
+            <ul class="sub">
+                <li>@Html.ActionLink("Peloton de Combinadas", "Index", "PelotonCombinadas",null,new {Class="agreen"})</li>
+                <li>@Html.ActionLink("Operadores de Combinadas", "Index", "OperadorCombinada",null,new {Class="agreen"})</li>
+                <li>@Html.ActionLink("Plan", "Index", "PlanOperadoresCombinadas",null,new {Class="agreen"})</li>
+            </ul>
+        </li>
+        <li>
+            <a href="#" class="button dblue">
+                <div class="arrow"></div>
+                <div class="icon">
+                    <span class="ico-layout-7"></span>
+                </div>
+                <div class="name">Suministradores</div>
+            </a>
+            <ul class="sub">
+                <li>@Html.ActionLink("Suministradores", "Index", "Suministradores",null,new {Class="ablue"})</li>
+                <li>@Html.ActionLink("Campo", "Index", "Campo",null,new {Class="ablue"})</li>
+                <li>@Html.ActionLink("Centros de Recepción", "Index", "CentrosRecepcion",null,new {Class="ablue"})</li>
+            </ul>
+        </li>
+        <li>
+            <a href="#" class="button purple">
+                <div class="arrow"></div>
+                <div class="icon">
+                    <span class="ico-box"></span>
+                </div>
+                <div class="name">Equipos Zafra</div>
+            </a>
+            <ul class="sub">
+                <li>@Html.ActionLink("Parque de Equipos", "Index", "ParqueEquipos",null,new {Class="apurple"})</li>
+                <li>@Html.ActionLink("Plan de Equipos de Zafra", "Index", "PlanEquiposAgricZafra",null,new {Class="apurple"})</li>
+            </ul>
+        </li>
+        <li>
+            <a href="/Reportes" class="button red">
+                <div class="icon">
+                    <span class="ico-chart-4"></span>
+                </div>
+                <div class="name">Reportes</div>
+            </a>
+        </li>
+        <li>
+            <div class="user">
+                @Html.Partial("_LoginPartial")
+            </div>
+            <div class="buttons">
+                <div class="sbutton green navButton">
+                    <a href="#"><span class="ico-align-justify"></span></a>
+                </div>
+                <div class="sbutton blue">
+                    <a href="#"><span class="ico-cogs"></span></a>
+                    <div class="popup">
+                        <div class="arrow"></div>
+                        <div class="row-fluid">
+                            <div class="row-form">
+                                @Html.ActionLink("Cerrar Sesión", "LogOff", "Account",null,new{Id="popupa"})
+                                @Html.ActionLink("Cambiar contraseña", "ChangePassword", "Account",null,new{Id="popupa"})
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</nav>

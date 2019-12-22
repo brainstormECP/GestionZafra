@@ -1,0 +1,13 @@
+﻿@if (Session["usuarioActual"] != null)
+{
+    var db = new GestionZafra.Models.Entities();
+    var user = Session["usuarioActual"] as GestionZafra.Models.Usuario; 
+    <a href="#" class="name">
+        <span>@user.nombreUsuario</span>
+        <span class="sm">@user.Rol.descripcionRol</span>
+    </a>
+}
+else
+{
+    @Html.ActionLink("Iniciar Sesión", "Login", "Account")
+}

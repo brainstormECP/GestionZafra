@@ -1,0 +1,66 @@
+﻿@model IEnumerable<GestionZafra.Models.PlanOperadoresCombinadas>
+
+@{
+    ViewBag.Title = " Operadores de Combinadas";
+    ViewBag.Message = "Planes de Operadores de Combinadas";
+}
+<div class="content">
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="block">
+                <div class="head dblue">
+                    <div class="icon"><span class="ico-layout-9"></span></div>
+                    @Html.ActionLink("Nuevo Plan de Operadores de Combinadas", "Create")
+                </div>
+                <div class="data-fluid">
+                    <table class="table fpTable lcnp" cellpadding="0" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.OperadorCombinada.nombreOperador)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.tareaDiaria)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.CentrosRecepcion.nombreCentroRecepcion)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Zafras.descripcionZafra)
+                                </th>
+                                <th width="80" class="TAC">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.OperadorCombinada.nombreOperador)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.tareaDiaria) @@
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.CentrosRecepcion.nombreCentroRecepcion)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Zafras.descripcionZafra)
+                                    </td>
+                                    <td>
+                                        <a href="@Url.Action("Edit","PlanOperadoresCombinadas")/@item.id" class="button green">
+                                            <div class="icon"><span class="ico-pencil"></span></div>
+                                        </a>
+                                        <a href="@Url.Action("Delete","PlanOperadoresCombinadas")/@item.id" class="button red">
+                                            <div class="icon"><span class="ico-remove"></span></div>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

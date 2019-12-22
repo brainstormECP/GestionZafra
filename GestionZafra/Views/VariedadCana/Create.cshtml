@@ -1,0 +1,30 @@
+﻿@model GestionZafra.Models.VariedadCana
+
+@{
+    ViewBag.Title = "Nueva Variedad de Caña";
+}
+<div class="span5">
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+
+        <fieldset class="data-fluid">
+            <legend>Variedad de Caña</legend>
+
+            <div class="row-form">
+                @Html.LabelFor(model => model.nombreVariedad)
+            </div>
+            <div class="row-form">
+                @Html.EditorFor(model => model.nombreVariedad)
+                @Html.ValidationMessageFor(model => model.nombreVariedad)
+            </div>
+            <div class="toolbar bottom tar">
+                @Html.ActionLink("Lista de Variedades de Caña", "Index",null,new{Class="btn"})
+                <input class="btn btn-success" type="submit" value="Nueva" />
+            </div>
+        </fieldset>
+    }
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

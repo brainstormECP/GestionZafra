@@ -1,0 +1,48 @@
+﻿@model IEnumerable<GestionZafra.Models.TiposSectorPropiedad>
+
+@{
+    ViewBag.Title = "Tipo de Sectores de Propiedad";
+    ViewBag.Message = "Tipo de Sectores de Propiedad";
+}
+<div class="content">
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="block">
+                <div class="head dblue">
+                    <div class="icon"><span class="ico-layout-9"></span></div>
+                    @Html.ActionLink("Nuevo Sector de Propiedad", "Create")
+                </div>
+                <div class="data-fluid">
+                    <table class="table fpTable lcnp" cellpadding="0" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.nombreTipoSector)
+                                </th>
+                                <th width="80" class="TAC">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.nombreTipoSector)
+                                    </td>
+                                    <td>
+                                        <a href="@Url.Action("Edit","TiposSectorPropiedad")/@item.id" class="button green">
+                                            <div class="icon"><span class="ico-pencil"></span></div>
+                                        </a>
+                                        <a href="@Url.Action("Delete","TiposSectorPropiedad")/@item.id" class="button red">
+                                            <div class="icon"><span class="ico-remove"></span></div>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

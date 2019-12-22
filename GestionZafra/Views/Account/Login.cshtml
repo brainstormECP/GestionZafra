@@ -1,0 +1,44 @@
+﻿@model GestionZafra.Models.LoginModel
+@{
+    Layout = "~/Views/Shared/_BasicLayout.cshtml";
+}
+@{
+    ViewBag.Title = "Iniciar Sesión";
+}
+
+<section id="loginForm">
+    <div class="login">
+        @using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl }))
+        {
+            @Html.AntiForgeryToken()
+            <fieldset class="data-fluid">
+                <legend></legend>
+                <div class="page-header">
+                    <div class="icon">
+                        <span class="ico-arrow-right"></span>
+                    </div>
+                    <h1>Inicio de Sesión</h1>
+                </div>
+                <div class="row-fluid">
+                    <div class="row-form">
+                        <div class="span12">
+                            @Html.TextBoxFor(m => m.Usuario, new { Placeholder = "Usuario" })
+                            @Html.ValidationMessageFor(m => m.Usuario)
+                        </div>
+                    </div>
+                    <div class="row-form">
+                        <div class="span12">
+                            @Html.PasswordFor(m => m.Contrasena, new { Placeholder = "Contraseña" })
+                            @Html.ValidationMessageFor(m => m.Contrasena)
+                        </div>
+                    </div>
+                    <div class="row-form">
+                        <div class="span12">
+                            <button class="btn" type="submit">Iniciar Sesión <span class="icon-arrow-next icon-white"></span></button>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        }
+    </div>
+</section>

@@ -1,0 +1,22 @@
+﻿@{
+    var db = new GestionZafra.Models.Entities();
+    if (db.ParametrosGenerales.Any())
+    {
+        var param = db.ParametrosGenerales.First();
+    <div class="row-fluid">
+        <div class="parametro-label">Fecha Actual:</div>
+        <div class="parametro-data">@param.fechaActual.ToShortDateString()</div>
+    </div>
+    <div class="row-fluid">
+        <div class="parametro-label">Zafra Actual:</div>
+        <div class="parametro-data">@param.Zafras.descripcionZafra</div>
+    </div>
+    }
+    else
+    {
+    <div>
+        <p class="parametro-label">Debe Configurar Parametros</p>
+
+    </div>
+    }
+}

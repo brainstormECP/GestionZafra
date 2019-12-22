@@ -1,0 +1,60 @@
+﻿@model GestionZafra.Models.PlanEquiposAgricZafra
+
+@{
+    ViewBag.Title = "Nuevo";
+}
+<div class="span5">
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+
+        <fieldset class="data-fluid">
+            <legend>Plan de Equipos de Zafra</legend>
+
+            <div class="row-form">
+                @Html.LabelFor(model => model.ParqueEquiposid, "ParqueEquipos")
+            </div>
+            <div class="row-form">
+                @Html.DropDownList("ParqueEquiposid")
+                @Html.ValidationMessageFor(model => model.ParqueEquiposid)
+            </div>
+
+            <div class="row-form">
+                @Html.LabelFor(model => model.parqueAsignado)
+            </div>
+            <div class="row-form">
+                @Html.TextBoxFor(model => model.parqueAsignado,new{Id="spinner"})
+                @Html.ValidationMessageFor(model => model.parqueAsignado)
+            </div>
+
+            <div class="row-form">
+                @Html.LabelFor(model => model.tareaDiaria)
+            </div>
+            <div class="row-form">
+                <div class="input-append">
+                     @Html.EditorFor(model => model.tareaDiaria)
+                    <span class="add-on blue">
+                        <i class="icon-white">@@</i>
+                    </span>
+                </div>
+                @Html.ValidationMessageFor(model => model.tareaDiaria)
+            </div>
+
+            <div class="row-form">
+                @Html.LabelFor(model => model.CentrosRecepcionid, "CentrosRecepcion")
+            </div>
+            <div class="row-form">
+                @Html.DropDownList("CentrosRecepcionid")
+                @Html.ValidationMessageFor(model => model.CentrosRecepcionid)
+            </div>
+
+            <div class="toolbar bottom tar">
+                 @Html.ActionLink("Lista de Planes", "Index",null,new{Class="btn"})
+                <input class="btn btn-success" type="submit" value="Nueva" />
+            </div>
+        </fieldset>
+    }
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

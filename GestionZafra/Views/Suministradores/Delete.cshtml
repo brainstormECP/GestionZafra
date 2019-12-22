@@ -1,0 +1,32 @@
+﻿@model GestionZafra.Models.Suministradores
+
+@{
+    ViewBag.Title = "Eliminar";
+}
+<h3>Esta seuro que desea eliminar este Suministrador?</h3>
+<div class="span5">
+    <fieldset class="data-fluid">
+        <legend>Suministradores</legend>
+        
+        <div class="row-form">
+            @Html.DisplayNameFor(model => model.TiposSectorPropiedad.nombreTipoSector):
+            <div class="label label-warning">
+                @Html.DisplayFor(model => model.TiposSectorPropiedad.nombreTipoSector)
+            </div>
+        </div>
+
+        <div class="row-form">
+            @Html.DisplayNameFor(model => model.nombreSuministrador):
+         <div class="label label-warning">
+             @Html.DisplayFor(model => model.nombreSuministrador)
+         </div>
+        </div>
+    </fieldset>
+    @using (Html.BeginForm())
+    {
+        <div class="toolbar bottom tar">
+            @Html.ActionLink("Atras", "Index",null,new{Class="btn"})
+            <input class="btn btn-danger" type="submit" value="Eliminar" />
+        </div>
+    }
+</div>
