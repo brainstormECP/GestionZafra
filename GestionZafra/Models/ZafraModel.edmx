@@ -1,0 +1,1415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="GestionZafraModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="GestionZafraModelStoreContainer">
+          <EntitySet Name="Campo" EntityType="GestionZafraModel.Store.Campo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CentrosRecepcion" EntityType="GestionZafraModel.Store.CentrosRecepcion" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DiarioEquiposZafra" EntityType="GestionZafraModel.Store.DiarioEquiposZafra" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DiarioOperadorCombinadas" EntityType="GestionZafraModel.Store.DiarioOperadorCombinadas" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="EstadoEquipo" EntityType="GestionZafraModel.Store.EstadoEquipo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MarcasCombinadas" EntityType="GestionZafraModel.Store.MarcasCombinadas" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="OperadorCombinada" EntityType="GestionZafraModel.Store.OperadorCombinada" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ParametrosGenerales" EntityType="GestionZafraModel.Store.ParametrosGenerales" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ParqueEquipos" EntityType="GestionZafraModel.Store.ParqueEquipos" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PelotonCombinadas" EntityType="GestionZafraModel.Store.PelotonCombinadas" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PlanEquiposAgricZafra" EntityType="GestionZafraModel.Store.PlanEquiposAgricZafra" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PlanOperadoresCombinadas" EntityType="GestionZafraModel.Store.PlanOperadoresCombinadas" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Rol" EntityType="GestionZafraModel.Store.Rol" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Suministradores" EntityType="GestionZafraModel.Store.Suministradores" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TipoEquipos" EntityType="GestionZafraModel.Store.TipoEquipos" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TiposSectorPropiedad" EntityType="GestionZafraModel.Store.TiposSectorPropiedad" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Usuario" EntityType="GestionZafraModel.Store.Usuario" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="VariedadCana" EntityType="GestionZafraModel.Store.VariedadCana" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Zafras" EntityType="GestionZafraModel.Store.Zafras" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FKCampo161005" Association="GestionZafraModel.Store.FKCampo161005">
+            <End Role="Suministradores" EntitySet="Suministradores" />
+            <End Role="Campo" EntitySet="Campo" />
+          </AssociationSet>
+          <AssociationSet Name="FKCampo53335" Association="GestionZafraModel.Store.FKCampo53335">
+            <End Role="VariedadCana" EntitySet="VariedadCana" />
+            <End Role="Campo" EntitySet="Campo" />
+          </AssociationSet>
+          <AssociationSet Name="FKDiarioEqui334875" Association="GestionZafraModel.Store.FKDiarioEqui334875">
+            <End Role="Zafras" EntitySet="Zafras" />
+            <End Role="DiarioEquiposZafra" EntitySet="DiarioEquiposZafra" />
+          </AssociationSet>
+          <AssociationSet Name="FKDiarioEqui435805" Association="GestionZafraModel.Store.FKDiarioEqui435805">
+            <End Role="PlanEquiposAgricZafra" EntitySet="PlanEquiposAgricZafra" />
+            <End Role="DiarioEquiposZafra" EntitySet="DiarioEquiposZafra" />
+          </AssociationSet>
+          <AssociationSet Name="FKDiarioEqui859692" Association="GestionZafraModel.Store.FKDiarioEqui859692">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="DiarioEquiposZafra" EntitySet="DiarioEquiposZafra" />
+          </AssociationSet>
+          <AssociationSet Name="FKDiarioOper100899" Association="GestionZafraModel.Store.FKDiarioOper100899">
+            <End Role="PlanOperadoresCombinadas" EntitySet="PlanOperadoresCombinadas" />
+            <End Role="DiarioOperadorCombinadas" EntitySet="DiarioOperadorCombinadas" />
+          </AssociationSet>
+          <AssociationSet Name="FKDiarioOper578327" Association="GestionZafraModel.Store.FKDiarioOper578327">
+            <End Role="EstadoEquipo" EntitySet="EstadoEquipo" />
+            <End Role="DiarioOperadorCombinadas" EntitySet="DiarioOperadorCombinadas" />
+          </AssociationSet>
+          <AssociationSet Name="FKDiarioOper626817" Association="GestionZafraModel.Store.FKDiarioOper626817">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="DiarioOperadorCombinadas" EntitySet="DiarioOperadorCombinadas" />
+          </AssociationSet>
+          <AssociationSet Name="FKDiarioOper822334" Association="GestionZafraModel.Store.FKDiarioOper822334">
+            <End Role="Campo" EntitySet="Campo" />
+            <End Role="DiarioOperadorCombinadas" EntitySet="DiarioOperadorCombinadas" />
+          </AssociationSet>
+          <AssociationSet Name="FKDiarioOper897999" Association="GestionZafraModel.Store.FKDiarioOper897999">
+            <End Role="Zafras" EntitySet="Zafras" />
+            <End Role="DiarioOperadorCombinadas" EntitySet="DiarioOperadorCombinadas" />
+          </AssociationSet>
+          <AssociationSet Name="FKOperadorCo455168" Association="GestionZafraModel.Store.FKOperadorCo455168">
+            <End Role="MarcasCombinadas" EntitySet="MarcasCombinadas" />
+            <End Role="OperadorCombinada" EntitySet="OperadorCombinada" />
+          </AssociationSet>
+          <AssociationSet Name="FKOperadorCo809279" Association="GestionZafraModel.Store.FKOperadorCo809279">
+            <End Role="PelotonCombinadas" EntitySet="PelotonCombinadas" />
+            <End Role="OperadorCombinada" EntitySet="OperadorCombinada" />
+          </AssociationSet>
+          <AssociationSet Name="FKParqueEqui172425" Association="GestionZafraModel.Store.FKParqueEqui172425">
+            <End Role="Suministradores" EntitySet="Suministradores" />
+            <End Role="ParqueEquipos" EntitySet="ParqueEquipos" />
+          </AssociationSet>
+          <AssociationSet Name="FKParqueEqui70865" Association="GestionZafraModel.Store.FKParqueEqui70865">
+            <End Role="TipoEquipos" EntitySet="TipoEquipos" />
+            <End Role="ParqueEquipos" EntitySet="ParqueEquipos" />
+          </AssociationSet>
+          <AssociationSet Name="FKPelotonCom54014" Association="GestionZafraModel.Store.FKPelotonCom54014">
+            <End Role="Suministradores" EntitySet="Suministradores" />
+            <End Role="PelotonCombinadas" EntitySet="PelotonCombinadas" />
+          </AssociationSet>
+          <AssociationSet Name="FKPlanEquipo297757" Association="GestionZafraModel.Store.FKPlanEquipo297757">
+            <End Role="ParqueEquipos" EntitySet="ParqueEquipos" />
+            <End Role="PlanEquiposAgricZafra" EntitySet="PlanEquiposAgricZafra" />
+          </AssociationSet>
+          <AssociationSet Name="FKPlanEquipo352056" Association="GestionZafraModel.Store.FKPlanEquipo352056">
+            <End Role="CentrosRecepcion" EntitySet="CentrosRecepcion" />
+            <End Role="PlanEquiposAgricZafra" EntitySet="PlanEquiposAgricZafra" />
+          </AssociationSet>
+          <AssociationSet Name="FKPlanEquipo587695" Association="GestionZafraModel.Store.FKPlanEquipo587695">
+            <End Role="Zafras" EntitySet="Zafras" />
+            <End Role="PlanEquiposAgricZafra" EntitySet="PlanEquiposAgricZafra" />
+          </AssociationSet>
+          <AssociationSet Name="FKPlanOperad22800" Association="GestionZafraModel.Store.FKPlanOperad22800">
+            <End Role="CentrosRecepcion" EntitySet="CentrosRecepcion" />
+            <End Role="PlanOperadoresCombinadas" EntitySet="PlanOperadoresCombinadas" />
+          </AssociationSet>
+          <AssociationSet Name="FKPlanOperad482811" Association="GestionZafraModel.Store.FKPlanOperad482811">
+            <End Role="OperadorCombinada" EntitySet="OperadorCombinada" />
+            <End Role="PlanOperadoresCombinadas" EntitySet="PlanOperadoresCombinadas" />
+          </AssociationSet>
+          <AssociationSet Name="FKPlanOperad741560" Association="GestionZafraModel.Store.FKPlanOperad741560">
+            <End Role="Zafras" EntitySet="Zafras" />
+            <End Role="PlanOperadoresCombinadas" EntitySet="PlanOperadoresCombinadas" />
+          </AssociationSet>
+          <AssociationSet Name="FKSuministra562195" Association="GestionZafraModel.Store.FKSuministra562195">
+            <End Role="TiposSectorPropiedad" EntitySet="TiposSectorPropiedad" />
+            <End Role="Suministradores" EntitySet="Suministradores" />
+          </AssociationSet>
+          <AssociationSet Name="FKUsuario38509" Association="GestionZafraModel.Store.FKUsuario38509">
+            <End Role="Rol" EntitySet="Rol" />
+            <End Role="Usuario" EntitySet="Usuario" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Campo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Suministradoresid" Type="int" Nullable="false" />
+          <Property Name="VariedadCanaid" Type="int" Nullable="false" />
+          <Property Name="cepa" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="cantCanaVerde" Type="decimal" Nullable="false" Precision="19" Scale="2" />
+          <Property Name="cantCanaQuemada" Type="decimal" Nullable="false" Precision="19" Scale="2" />
+        </EntityType>
+        <EntityType Name="CentrosRecepcion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nombreCentroRecepcion" Type="varchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="DiarioEquiposZafra">
+          <Key>
+            <PropertyRef Name="PlanEquiposAgricZafraid" />
+            <PropertyRef Name="fecha" />
+          </Key>
+          <Property Name="PlanEquiposAgricZafraid" Type="int" Nullable="false" />
+          <Property Name="fecha" Type="datetime" Nullable="false" />
+          <Property Name="arrobasTiradas" Type="decimal" Nullable="false" Precision="19" Scale="2" />
+          <Property Name="parqueParado" Type="int" Nullable="false" />
+          <Property Name="Usuarioid" Type="int" Nullable="false" />
+          <Property Name="Zafrasid" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DiarioOperadorCombinadas">
+          <Key>
+            <PropertyRef Name="PlanOperadoresCombinadasid" />
+            <PropertyRef Name="fecha" />
+          </Key>
+          <Property Name="PlanOperadoresCombinadasid" Type="int" Nullable="false" />
+          <Property Name="fecha" Type="datetime" Nullable="false" />
+          <Property Name="Campoid" Type="int" Nullable="false" />
+          <Property Name="EstadoEquipoid" Type="int" Nullable="false" />
+          <Property Name="cantQuemada" Type="decimal" Nullable="false" Precision="19" Scale="2" />
+          <Property Name="cantQuemadaProgram" Type="decimal" Nullable="false" Precision="19" Scale="2" />
+          <Property Name="cantVerde" Type="decimal" Nullable="false" Precision="19" Scale="2" />
+          <Property Name="Usuarioid" Type="int" Nullable="false" />
+          <Property Name="Zafrasid" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EstadoEquipo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nombreEstado" Type="varchar" Nullable="false" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="MarcasCombinadas">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nombreCombinada" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="OperadorCombinada">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nombreOperador" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="MarcasCombinadasid" Type="int" Nullable="false" />
+          <Property Name="PelotonCombinadasid" Type="int" Nullable="false" />
+          <Property Name="activo" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ParametrosGenerales">
+          <Key>
+            <PropertyRef Name="codigoEmpresa" />
+          </Key>
+          <Property Name="codigoEmpresa" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nombreEmpresa" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="fechaActual" Type="datetime" Nullable="false" />
+          <Property Name="zafraAct" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ParqueEquipos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Suministradoresid" Type="int" Nullable="false" />
+          <Property Name="TipoEquiposid" Type="int" Nullable="false" />
+          <Property Name="cantidadEquipos" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PelotonCombinadas">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Suministradoresid" Type="int" Nullable="false" />
+          <Property Name="parque" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PlanEquiposAgricZafra">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ParqueEquiposid" Type="int" Nullable="false" />
+          <Property Name="parqueAsignado" Type="int" Nullable="false" />
+          <Property Name="tareaDiaria" Type="decimal" Nullable="false" Precision="19" Scale="2" />
+          <Property Name="CentrosRecepcionid" Type="int" Nullable="false" />
+          <Property Name="Zafrasid" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PlanOperadoresCombinadas">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="OperadorCombinadaid" Type="int" Nullable="false" />
+          <Property Name="tareaDiaria" Type="decimal" Nullable="false" Precision="19" Scale="2" />
+          <Property Name="CentrosRecepcionid" Type="int" Nullable="false" />
+          <Property Name="Zafrasid" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Rol">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="descripcionRol" Type="varchar" Nullable="false" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="Suministradores">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TiposSectorPropiedadid" Type="int" Nullable="false" />
+          <Property Name="nombreSuministrador" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="activo" Type="bit" />
+        </EntityType>
+        <EntityType Name="TipoEquipos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="descripcionEquipo" Type="varchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="TiposSectorPropiedad">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nombreTipoSector" Type="varchar" Nullable="false" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nombreUsuario" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Rolid" Type="int" Nullable="false" />
+          <Property Name="pass" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="activo" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VariedadCana">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nombreVariedad" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Zafras">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="descripcionZafra" Type="varchar" Nullable="false" MaxLength="9" />
+          <Property Name="fechaInicio" Type="datetime" Nullable="false" />
+          <Property Name="fechaFin" Type="datetime" />
+        </EntityType>
+        <Association Name="FKCampo161005">
+          <End Role="Suministradores" Type="GestionZafraModel.Store.Suministradores" Multiplicity="1" />
+          <End Role="Campo" Type="GestionZafraModel.Store.Campo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Suministradores">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Campo">
+              <PropertyRef Name="Suministradoresid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKCampo53335">
+          <End Role="VariedadCana" Type="GestionZafraModel.Store.VariedadCana" Multiplicity="1" />
+          <End Role="Campo" Type="GestionZafraModel.Store.Campo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VariedadCana">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Campo">
+              <PropertyRef Name="VariedadCanaid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKDiarioEqui334875">
+          <End Role="Zafras" Type="GestionZafraModel.Store.Zafras" Multiplicity="1" />
+          <End Role="DiarioEquiposZafra" Type="GestionZafraModel.Store.DiarioEquiposZafra" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zafras">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="DiarioEquiposZafra">
+              <PropertyRef Name="Zafrasid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKDiarioEqui435805">
+          <End Role="PlanEquiposAgricZafra" Type="GestionZafraModel.Store.PlanEquiposAgricZafra" Multiplicity="1" />
+          <End Role="DiarioEquiposZafra" Type="GestionZafraModel.Store.DiarioEquiposZafra" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PlanEquiposAgricZafra">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="DiarioEquiposZafra">
+              <PropertyRef Name="PlanEquiposAgricZafraid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKDiarioEqui859692">
+          <End Role="Usuario" Type="GestionZafraModel.Store.Usuario" Multiplicity="1" />
+          <End Role="DiarioEquiposZafra" Type="GestionZafraModel.Store.DiarioEquiposZafra" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="DiarioEquiposZafra">
+              <PropertyRef Name="Usuarioid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKDiarioOper100899">
+          <End Role="PlanOperadoresCombinadas" Type="GestionZafraModel.Store.PlanOperadoresCombinadas" Multiplicity="1" />
+          <End Role="DiarioOperadorCombinadas" Type="GestionZafraModel.Store.DiarioOperadorCombinadas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PlanOperadoresCombinadas">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="DiarioOperadorCombinadas">
+              <PropertyRef Name="PlanOperadoresCombinadasid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKDiarioOper578327">
+          <End Role="EstadoEquipo" Type="GestionZafraModel.Store.EstadoEquipo" Multiplicity="1" />
+          <End Role="DiarioOperadorCombinadas" Type="GestionZafraModel.Store.DiarioOperadorCombinadas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EstadoEquipo">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="DiarioOperadorCombinadas">
+              <PropertyRef Name="EstadoEquipoid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKDiarioOper626817">
+          <End Role="Usuario" Type="GestionZafraModel.Store.Usuario" Multiplicity="1" />
+          <End Role="DiarioOperadorCombinadas" Type="GestionZafraModel.Store.DiarioOperadorCombinadas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="DiarioOperadorCombinadas">
+              <PropertyRef Name="Usuarioid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKDiarioOper822334">
+          <End Role="Campo" Type="GestionZafraModel.Store.Campo" Multiplicity="1" />
+          <End Role="DiarioOperadorCombinadas" Type="GestionZafraModel.Store.DiarioOperadorCombinadas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Campo">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="DiarioOperadorCombinadas">
+              <PropertyRef Name="Campoid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKDiarioOper897999">
+          <End Role="Zafras" Type="GestionZafraModel.Store.Zafras" Multiplicity="1" />
+          <End Role="DiarioOperadorCombinadas" Type="GestionZafraModel.Store.DiarioOperadorCombinadas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zafras">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="DiarioOperadorCombinadas">
+              <PropertyRef Name="Zafrasid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKOperadorCo455168">
+          <End Role="MarcasCombinadas" Type="GestionZafraModel.Store.MarcasCombinadas" Multiplicity="1" />
+          <End Role="OperadorCombinada" Type="GestionZafraModel.Store.OperadorCombinada" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MarcasCombinadas">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="OperadorCombinada">
+              <PropertyRef Name="MarcasCombinadasid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKOperadorCo809279">
+          <End Role="PelotonCombinadas" Type="GestionZafraModel.Store.PelotonCombinadas" Multiplicity="1" />
+          <End Role="OperadorCombinada" Type="GestionZafraModel.Store.OperadorCombinada" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PelotonCombinadas">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="OperadorCombinada">
+              <PropertyRef Name="PelotonCombinadasid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKParqueEqui172425">
+          <End Role="Suministradores" Type="GestionZafraModel.Store.Suministradores" Multiplicity="1" />
+          <End Role="ParqueEquipos" Type="GestionZafraModel.Store.ParqueEquipos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Suministradores">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ParqueEquipos">
+              <PropertyRef Name="Suministradoresid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKParqueEqui70865">
+          <End Role="TipoEquipos" Type="GestionZafraModel.Store.TipoEquipos" Multiplicity="1" />
+          <End Role="ParqueEquipos" Type="GestionZafraModel.Store.ParqueEquipos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoEquipos">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ParqueEquipos">
+              <PropertyRef Name="TipoEquiposid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKPelotonCom54014">
+          <End Role="Suministradores" Type="GestionZafraModel.Store.Suministradores" Multiplicity="1" />
+          <End Role="PelotonCombinadas" Type="GestionZafraModel.Store.PelotonCombinadas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Suministradores">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="PelotonCombinadas">
+              <PropertyRef Name="Suministradoresid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKPlanEquipo297757">
+          <End Role="ParqueEquipos" Type="GestionZafraModel.Store.ParqueEquipos" Multiplicity="1" />
+          <End Role="PlanEquiposAgricZafra" Type="GestionZafraModel.Store.PlanEquiposAgricZafra" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ParqueEquipos">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="PlanEquiposAgricZafra">
+              <PropertyRef Name="ParqueEquiposid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKPlanEquipo352056">
+          <End Role="CentrosRecepcion" Type="GestionZafraModel.Store.CentrosRecepcion" Multiplicity="1" />
+          <End Role="PlanEquiposAgricZafra" Type="GestionZafraModel.Store.PlanEquiposAgricZafra" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CentrosRecepcion">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="PlanEquiposAgricZafra">
+              <PropertyRef Name="CentrosRecepcionid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKPlanEquipo587695">
+          <End Role="Zafras" Type="GestionZafraModel.Store.Zafras" Multiplicity="1" />
+          <End Role="PlanEquiposAgricZafra" Type="GestionZafraModel.Store.PlanEquiposAgricZafra" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zafras">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="PlanEquiposAgricZafra">
+              <PropertyRef Name="Zafrasid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKPlanOperad22800">
+          <End Role="CentrosRecepcion" Type="GestionZafraModel.Store.CentrosRecepcion" Multiplicity="1" />
+          <End Role="PlanOperadoresCombinadas" Type="GestionZafraModel.Store.PlanOperadoresCombinadas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CentrosRecepcion">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="PlanOperadoresCombinadas">
+              <PropertyRef Name="CentrosRecepcionid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKPlanOperad482811">
+          <End Role="OperadorCombinada" Type="GestionZafraModel.Store.OperadorCombinada" Multiplicity="1" />
+          <End Role="PlanOperadoresCombinadas" Type="GestionZafraModel.Store.PlanOperadoresCombinadas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OperadorCombinada">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="PlanOperadoresCombinadas">
+              <PropertyRef Name="OperadorCombinadaid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKPlanOperad741560">
+          <End Role="Zafras" Type="GestionZafraModel.Store.Zafras" Multiplicity="1" />
+          <End Role="PlanOperadoresCombinadas" Type="GestionZafraModel.Store.PlanOperadoresCombinadas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zafras">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="PlanOperadoresCombinadas">
+              <PropertyRef Name="Zafrasid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKSuministra562195">
+          <End Role="TiposSectorPropiedad" Type="GestionZafraModel.Store.TiposSectorPropiedad" Multiplicity="1" />
+          <End Role="Suministradores" Type="GestionZafraModel.Store.Suministradores" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TiposSectorPropiedad">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Suministradores">
+              <PropertyRef Name="TiposSectorPropiedadid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKUsuario38509">
+          <End Role="Rol" Type="GestionZafraModel.Store.Rol" Multiplicity="1" />
+          <End Role="Usuario" Type="GestionZafraModel.Store.Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rol">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Usuario">
+              <PropertyRef Name="Rolid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GestionZafraModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="Entities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Campo" EntityType="GestionZafraModel.Campo" />
+          <EntitySet Name="CentrosRecepcion" EntityType="GestionZafraModel.CentrosRecepcion" />
+          <EntitySet Name="DiarioEquiposZafra" EntityType="GestionZafraModel.DiarioEquiposZafra" />
+          <EntitySet Name="DiarioOperadorCombinadas" EntityType="GestionZafraModel.DiarioOperadorCombinadas" />
+          <EntitySet Name="EstadoEquipo" EntityType="GestionZafraModel.EstadoEquipo" />
+          <EntitySet Name="MarcasCombinadas" EntityType="GestionZafraModel.MarcasCombinadas" />
+          <EntitySet Name="OperadorCombinada" EntityType="GestionZafraModel.OperadorCombinada" />
+          <EntitySet Name="ParametrosGenerales" EntityType="GestionZafraModel.ParametrosGenerales" />
+          <EntitySet Name="ParqueEquipos" EntityType="GestionZafraModel.ParqueEquipos" />
+          <EntitySet Name="PelotonCombinadas" EntityType="GestionZafraModel.PelotonCombinadas" />
+          <EntitySet Name="PlanEquiposAgricZafra" EntityType="GestionZafraModel.PlanEquiposAgricZafra" />
+          <EntitySet Name="PlanOperadoresCombinadas" EntityType="GestionZafraModel.PlanOperadoresCombinadas" />
+          <EntitySet Name="Rol" EntityType="GestionZafraModel.Rol" />
+          <EntitySet Name="Suministradores" EntityType="GestionZafraModel.Suministradores" />
+          <EntitySet Name="TipoEquipos" EntityType="GestionZafraModel.TipoEquipos" />
+          <EntitySet Name="TiposSectorPropiedad" EntityType="GestionZafraModel.TiposSectorPropiedad" />
+          <EntitySet Name="Usuario" EntityType="GestionZafraModel.Usuario" />
+          <EntitySet Name="VariedadCana" EntityType="GestionZafraModel.VariedadCana" />
+          <EntitySet Name="Zafras" EntityType="GestionZafraModel.Zafras" />
+          <AssociationSet Name="FKCampo161005" Association="GestionZafraModel.FKCampo161005">
+            <End Role="Suministradores" EntitySet="Suministradores" />
+            <End Role="Campo" EntitySet="Campo" />
+          </AssociationSet>
+          <AssociationSet Name="FKCampo53335" Association="GestionZafraModel.FKCampo53335">
+            <End Role="VariedadCana" EntitySet="VariedadCana" />
+            <End Role="Campo" EntitySet="Campo" />
+          </AssociationSet>
+          <AssociationSet Name="FKDiarioOper822334" Association="GestionZafraModel.FKDiarioOper822334">
+            <End Role="Campo" EntitySet="Campo" />
+            <End Role="DiarioOperadorCombinadas" EntitySet="DiarioOperadorCombinadas" />
+          </AssociationSet>
+          <AssociationSet Name="FKPlanEquipo352056" Association="GestionZafraModel.FKPlanEquipo352056">
+            <End Role="CentrosRecepcion" EntitySet="CentrosRecepcion" />
+            <End Role="PlanEquiposAgricZafra" EntitySet="PlanEquiposAgricZafra" />
+          </AssociationSet>
+          <AssociationSet Name="FKPlanOperad22800" Association="GestionZafraModel.FKPlanOperad22800">
+            <End Role="CentrosRecepcion" EntitySet="CentrosRecepcion" />
+            <End Role="PlanOperadoresCombinadas" EntitySet="PlanOperadoresCombinadas" />
+          </AssociationSet>
+          <AssociationSet Name="FKDiarioEqui334875" Association="GestionZafraModel.FKDiarioEqui334875">
+            <End Role="Zafras" EntitySet="Zafras" />
+            <End Role="DiarioEquiposZafra" EntitySet="DiarioEquiposZafra" />
+          </AssociationSet>
+          <AssociationSet Name="FKDiarioEqui435805" Association="GestionZafraModel.FKDiarioEqui435805">
+            <End Role="PlanEquiposAgricZafra" EntitySet="PlanEquiposAgricZafra" />
+            <End Role="DiarioEquiposZafra" EntitySet="DiarioEquiposZafra" />
+          </AssociationSet>
+          <AssociationSet Name="FKDiarioEqui859692" Association="GestionZafraModel.FKDiarioEqui859692">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="DiarioEquiposZafra" EntitySet="DiarioEquiposZafra" />
+          </AssociationSet>
+          <AssociationSet Name="FKDiarioOper100899" Association="GestionZafraModel.FKDiarioOper100899">
+            <End Role="PlanOperadoresCombinadas" EntitySet="PlanOperadoresCombinadas" />
+            <End Role="DiarioOperadorCombinadas" EntitySet="DiarioOperadorCombinadas" />
+          </AssociationSet>
+          <AssociationSet Name="FKDiarioOper578327" Association="GestionZafraModel.FKDiarioOper578327">
+            <End Role="EstadoEquipo" EntitySet="EstadoEquipo" />
+            <End Role="DiarioOperadorCombinadas" EntitySet="DiarioOperadorCombinadas" />
+          </AssociationSet>
+          <AssociationSet Name="FKDiarioOper626817" Association="GestionZafraModel.FKDiarioOper626817">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="DiarioOperadorCombinadas" EntitySet="DiarioOperadorCombinadas" />
+          </AssociationSet>
+          <AssociationSet Name="FKDiarioOper897999" Association="GestionZafraModel.FKDiarioOper897999">
+            <End Role="Zafras" EntitySet="Zafras" />
+            <End Role="DiarioOperadorCombinadas" EntitySet="DiarioOperadorCombinadas" />
+          </AssociationSet>
+          <AssociationSet Name="FKOperadorCo455168" Association="GestionZafraModel.FKOperadorCo455168">
+            <End Role="MarcasCombinadas" EntitySet="MarcasCombinadas" />
+            <End Role="OperadorCombinada" EntitySet="OperadorCombinada" />
+          </AssociationSet>
+          <AssociationSet Name="FKOperadorCo809279" Association="GestionZafraModel.FKOperadorCo809279">
+            <End Role="PelotonCombinadas" EntitySet="PelotonCombinadas" />
+            <End Role="OperadorCombinada" EntitySet="OperadorCombinada" />
+          </AssociationSet>
+          <AssociationSet Name="FKPlanOperad482811" Association="GestionZafraModel.FKPlanOperad482811">
+            <End Role="OperadorCombinada" EntitySet="OperadorCombinada" />
+            <End Role="PlanOperadoresCombinadas" EntitySet="PlanOperadoresCombinadas" />
+          </AssociationSet>
+          <AssociationSet Name="FKParametros205676" Association="GestionZafraModel.FKParametros205676">
+            <End Role="Zafras" EntitySet="Zafras" />
+            <End Role="ParametrosGenerales" EntitySet="ParametrosGenerales" />
+          </AssociationSet>
+          <AssociationSet Name="FKParqueEqui172425" Association="GestionZafraModel.FKParqueEqui172425">
+            <End Role="Suministradores" EntitySet="Suministradores" />
+            <End Role="ParqueEquipos" EntitySet="ParqueEquipos" />
+          </AssociationSet>
+          <AssociationSet Name="FKParqueEqui70865" Association="GestionZafraModel.FKParqueEqui70865">
+            <End Role="TipoEquipos" EntitySet="TipoEquipos" />
+            <End Role="ParqueEquipos" EntitySet="ParqueEquipos" />
+          </AssociationSet>
+          <AssociationSet Name="FKPlanEquipo297757" Association="GestionZafraModel.FKPlanEquipo297757">
+            <End Role="ParqueEquipos" EntitySet="ParqueEquipos" />
+            <End Role="PlanEquiposAgricZafra" EntitySet="PlanEquiposAgricZafra" />
+          </AssociationSet>
+          <AssociationSet Name="FKPelotonCom54014" Association="GestionZafraModel.FKPelotonCom54014">
+            <End Role="Suministradores" EntitySet="Suministradores" />
+            <End Role="PelotonCombinadas" EntitySet="PelotonCombinadas" />
+          </AssociationSet>
+          <AssociationSet Name="FKPlanEquipo587695" Association="GestionZafraModel.FKPlanEquipo587695">
+            <End Role="Zafras" EntitySet="Zafras" />
+            <End Role="PlanEquiposAgricZafra" EntitySet="PlanEquiposAgricZafra" />
+          </AssociationSet>
+          <AssociationSet Name="FKPlanOperad741560" Association="GestionZafraModel.FKPlanOperad741560">
+            <End Role="Zafras" EntitySet="Zafras" />
+            <End Role="PlanOperadoresCombinadas" EntitySet="PlanOperadoresCombinadas" />
+          </AssociationSet>
+          <AssociationSet Name="FKUsuario38509" Association="GestionZafraModel.FKUsuario38509">
+            <End Role="Rol" EntitySet="Rol" />
+            <End Role="Usuario" EntitySet="Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FKSuministra562195" Association="GestionZafraModel.FKSuministra562195">
+            <End Role="TiposSectorPropiedad" EntitySet="TiposSectorPropiedad" />
+            <End Role="Suministradores" EntitySet="Suministradores" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Campo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Suministradoresid" Type="Int32" Nullable="false" />
+          <Property Name="VariedadCanaid" Type="Int32" Nullable="false" />
+          <Property Name="cepa" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="cantCanaVerde" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+          <Property Name="cantCanaQuemada" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+          <NavigationProperty Name="Suministradores" Relationship="GestionZafraModel.FKCampo161005" FromRole="Campo" ToRole="Suministradores" />
+          <NavigationProperty Name="VariedadCana" Relationship="GestionZafraModel.FKCampo53335" FromRole="Campo" ToRole="VariedadCana" />
+          <NavigationProperty Name="DiarioOperadorCombinadas" Relationship="GestionZafraModel.FKDiarioOper822334" FromRole="Campo" ToRole="DiarioOperadorCombinadas" />
+        </EntityType>
+        <EntityType Name="CentrosRecepcion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="nombreCentroRecepcion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="PlanEquiposAgricZafra" Relationship="GestionZafraModel.FKPlanEquipo352056" FromRole="CentrosRecepcion" ToRole="PlanEquiposAgricZafra" />
+          <NavigationProperty Name="PlanOperadoresCombinadas" Relationship="GestionZafraModel.FKPlanOperad22800" FromRole="CentrosRecepcion" ToRole="PlanOperadoresCombinadas" />
+        </EntityType>
+        <EntityType Name="DiarioEquiposZafra">
+          <Key>
+            <PropertyRef Name="PlanEquiposAgricZafraid" />
+            <PropertyRef Name="fecha" />
+          </Key>
+          <Property Name="PlanEquiposAgricZafraid" Type="Int32" Nullable="false" />
+          <Property Name="fecha" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="arrobasTiradas" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+          <Property Name="parqueParado" Type="Int32" Nullable="false" />
+          <Property Name="Usuarioid" Type="Int32" Nullable="false" />
+          <Property Name="Zafrasid" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Zafras" Relationship="GestionZafraModel.FKDiarioEqui334875" FromRole="DiarioEquiposZafra" ToRole="Zafras" />
+          <NavigationProperty Name="PlanEquiposAgricZafra" Relationship="GestionZafraModel.FKDiarioEqui435805" FromRole="DiarioEquiposZafra" ToRole="PlanEquiposAgricZafra" />
+          <NavigationProperty Name="Usuario" Relationship="GestionZafraModel.FKDiarioEqui859692" FromRole="DiarioEquiposZafra" ToRole="Usuario" />
+        </EntityType>
+        <EntityType Name="DiarioOperadorCombinadas">
+          <Key>
+            <PropertyRef Name="PlanOperadoresCombinadasid" />
+            <PropertyRef Name="fecha" />
+          </Key>
+          <Property Name="PlanOperadoresCombinadasid" Type="Int32" Nullable="false" />
+          <Property Name="fecha" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Campoid" Type="Int32" Nullable="false" />
+          <Property Name="EstadoEquipoid" Type="Int32" Nullable="false" />
+          <Property Name="cantQuemada" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+          <Property Name="cantQuemadaProgram" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+          <Property Name="cantVerde" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+          <Property Name="Usuarioid" Type="Int32" Nullable="false" />
+          <Property Name="Zafrasid" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Campo" Relationship="GestionZafraModel.FKDiarioOper822334" FromRole="DiarioOperadorCombinadas" ToRole="Campo" />
+          <NavigationProperty Name="PlanOperadoresCombinadas" Relationship="GestionZafraModel.FKDiarioOper100899" FromRole="DiarioOperadorCombinadas" ToRole="PlanOperadoresCombinadas" />
+          <NavigationProperty Name="EstadoEquipo" Relationship="GestionZafraModel.FKDiarioOper578327" FromRole="DiarioOperadorCombinadas" ToRole="EstadoEquipo" />
+          <NavigationProperty Name="Usuario" Relationship="GestionZafraModel.FKDiarioOper626817" FromRole="DiarioOperadorCombinadas" ToRole="Usuario" />
+          <NavigationProperty Name="Zafras" Relationship="GestionZafraModel.FKDiarioOper897999" FromRole="DiarioOperadorCombinadas" ToRole="Zafras" />
+        </EntityType>
+        <EntityType Name="EstadoEquipo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="nombreEstado" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="DiarioOperadorCombinadas" Relationship="GestionZafraModel.FKDiarioOper578327" FromRole="EstadoEquipo" ToRole="DiarioOperadorCombinadas" />
+        </EntityType>
+        <EntityType Name="MarcasCombinadas">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="nombreCombinada" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="OperadorCombinada" Relationship="GestionZafraModel.FKOperadorCo455168" FromRole="MarcasCombinadas" ToRole="OperadorCombinada" />
+        </EntityType>
+        <EntityType Name="OperadorCombinada">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="nombreOperador" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="MarcasCombinadasid" Type="Int32" Nullable="false" />
+          <Property Name="PelotonCombinadasid" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="MarcasCombinadas" Relationship="GestionZafraModel.FKOperadorCo455168" FromRole="OperadorCombinada" ToRole="MarcasCombinadas" />
+          <NavigationProperty Name="PelotonCombinadas" Relationship="GestionZafraModel.FKOperadorCo809279" FromRole="OperadorCombinada" ToRole="PelotonCombinadas" />
+          <NavigationProperty Name="PlanOperadoresCombinadas" Relationship="GestionZafraModel.FKPlanOperad482811" FromRole="OperadorCombinada" ToRole="PlanOperadoresCombinadas" />
+          <Property Type="Boolean" Name="activo" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ParametrosGenerales">
+          <Key>
+            <PropertyRef Name="codigoEmpresa" />
+          </Key>
+          <Property Name="codigoEmpresa" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="nombreEmpresa" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="fechaActual" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="zafraAct" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Zafras" Relationship="GestionZafraModel.FKParametros205676" FromRole="ParametrosGenerales" ToRole="Zafras" />
+        </EntityType>
+        <EntityType Name="ParqueEquipos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Suministradoresid" Type="Int32" Nullable="false" />
+          <Property Name="TipoEquiposid" Type="Int32" Nullable="false" />
+          <Property Name="cantidadEquipos" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Suministradores" Relationship="GestionZafraModel.FKParqueEqui172425" FromRole="ParqueEquipos" ToRole="Suministradores" />
+          <NavigationProperty Name="TipoEquipos" Relationship="GestionZafraModel.FKParqueEqui70865" FromRole="ParqueEquipos" ToRole="TipoEquipos" />
+          <NavigationProperty Name="PlanEquiposAgricZafra" Relationship="GestionZafraModel.FKPlanEquipo297757" FromRole="ParqueEquipos" ToRole="PlanEquiposAgricZafra" />
+        </EntityType>
+        <EntityType Name="PelotonCombinadas">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Suministradoresid" Type="Int32" Nullable="false" />
+          <Property Name="parque" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="OperadorCombinada" Relationship="GestionZafraModel.FKOperadorCo809279" FromRole="PelotonCombinadas" ToRole="OperadorCombinada" />
+          <NavigationProperty Name="Suministradores" Relationship="GestionZafraModel.FKPelotonCom54014" FromRole="PelotonCombinadas" ToRole="Suministradores" />
+        </EntityType>
+        <EntityType Name="PlanEquiposAgricZafra">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ParqueEquiposid" Type="Int32" Nullable="false" />
+          <Property Name="parqueAsignado" Type="Int32" Nullable="false" />
+          <Property Name="tareaDiaria" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+          <Property Name="CentrosRecepcionid" Type="Int32" Nullable="false" />
+          <Property Name="Zafrasid" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CentrosRecepcion" Relationship="GestionZafraModel.FKPlanEquipo352056" FromRole="PlanEquiposAgricZafra" ToRole="CentrosRecepcion" />
+          <NavigationProperty Name="DiarioEquiposZafra" Relationship="GestionZafraModel.FKDiarioEqui435805" FromRole="PlanEquiposAgricZafra" ToRole="DiarioEquiposZafra" />
+          <NavigationProperty Name="ParqueEquipos" Relationship="GestionZafraModel.FKPlanEquipo297757" FromRole="PlanEquiposAgricZafra" ToRole="ParqueEquipos" />
+          <NavigationProperty Name="Zafras" Relationship="GestionZafraModel.FKPlanEquipo587695" FromRole="PlanEquiposAgricZafra" ToRole="Zafras" />
+        </EntityType>
+        <EntityType Name="PlanOperadoresCombinadas">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="OperadorCombinadaid" Type="Int32" Nullable="false" />
+          <Property Name="tareaDiaria" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+          <Property Name="CentrosRecepcionid" Type="Int32" Nullable="false" />
+          <Property Name="Zafrasid" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CentrosRecepcion" Relationship="GestionZafraModel.FKPlanOperad22800" FromRole="PlanOperadoresCombinadas" ToRole="CentrosRecepcion" />
+          <NavigationProperty Name="DiarioOperadorCombinadas" Relationship="GestionZafraModel.FKDiarioOper100899" FromRole="PlanOperadoresCombinadas" ToRole="DiarioOperadorCombinadas" />
+          <NavigationProperty Name="OperadorCombinada" Relationship="GestionZafraModel.FKPlanOperad482811" FromRole="PlanOperadoresCombinadas" ToRole="OperadorCombinada" />
+          <NavigationProperty Name="Zafras" Relationship="GestionZafraModel.FKPlanOperad741560" FromRole="PlanOperadoresCombinadas" ToRole="Zafras" />
+        </EntityType>
+        <EntityType Name="Rol">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="descripcionRol" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Usuario" Relationship="GestionZafraModel.FKUsuario38509" FromRole="Rol" ToRole="Usuario" />
+        </EntityType>
+        <EntityType Name="Suministradores">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="TiposSectorPropiedadid" Type="Int32" Nullable="false" />
+          <Property Name="nombreSuministrador" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Campo" Relationship="GestionZafraModel.FKCampo161005" FromRole="Suministradores" ToRole="Campo" />
+          <NavigationProperty Name="ParqueEquipos" Relationship="GestionZafraModel.FKParqueEqui172425" FromRole="Suministradores" ToRole="ParqueEquipos" />
+          <NavigationProperty Name="PelotonCombinadas" Relationship="GestionZafraModel.FKPelotonCom54014" FromRole="Suministradores" ToRole="PelotonCombinadas" />
+          <NavigationProperty Name="TiposSectorPropiedad" Relationship="GestionZafraModel.FKSuministra562195" FromRole="Suministradores" ToRole="TiposSectorPropiedad" />
+          <Property Type="Boolean" Name="activo" />
+        </EntityType>
+        <EntityType Name="TipoEquipos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="descripcionEquipo" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="ParqueEquipos" Relationship="GestionZafraModel.FKParqueEqui70865" FromRole="TipoEquipos" ToRole="ParqueEquipos" />
+        </EntityType>
+        <EntityType Name="TiposSectorPropiedad">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="nombreTipoSector" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Suministradores" Relationship="GestionZafraModel.FKSuministra562195" FromRole="TiposSectorPropiedad" ToRole="Suministradores" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="nombreUsuario" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Rolid" Type="Int32" Nullable="false" />
+          <Property Name="pass" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="DiarioEquiposZafra" Relationship="GestionZafraModel.FKDiarioEqui859692" FromRole="Usuario" ToRole="DiarioEquiposZafra" />
+          <NavigationProperty Name="DiarioOperadorCombinadas" Relationship="GestionZafraModel.FKDiarioOper626817" FromRole="Usuario" ToRole="DiarioOperadorCombinadas" />
+          <NavigationProperty Name="Rol" Relationship="GestionZafraModel.FKUsuario38509" FromRole="Usuario" ToRole="Rol" />
+          <Property Type="Boolean" Name="activo" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VariedadCana">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="nombreVariedad" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Campo" Relationship="GestionZafraModel.FKCampo53335" FromRole="VariedadCana" ToRole="Campo" />
+        </EntityType>
+        <EntityType Name="Zafras">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="descripcionZafra" Type="String" Nullable="false" MaxLength="9" Unicode="false" FixedLength="false" />
+          <Property Name="fechaInicio" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="fechaFin" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="DiarioEquiposZafra" Relationship="GestionZafraModel.FKDiarioEqui334875" FromRole="Zafras" ToRole="DiarioEquiposZafra" />
+          <NavigationProperty Name="DiarioOperadorCombinadas" Relationship="GestionZafraModel.FKDiarioOper897999" FromRole="Zafras" ToRole="DiarioOperadorCombinadas" />
+          <NavigationProperty Name="ParametrosGenerales" Relationship="GestionZafraModel.FKParametros205676" FromRole="Zafras" ToRole="ParametrosGenerales" />
+          <NavigationProperty Name="PlanEquiposAgricZafra" Relationship="GestionZafraModel.FKPlanEquipo587695" FromRole="Zafras" ToRole="PlanEquiposAgricZafra" />
+          <NavigationProperty Name="PlanOperadoresCombinadas" Relationship="GestionZafraModel.FKPlanOperad741560" FromRole="Zafras" ToRole="PlanOperadoresCombinadas" />
+        </EntityType>
+        <Association Name="FKCampo161005">
+          <End Role="Suministradores" Type="GestionZafraModel.Suministradores" Multiplicity="1" />
+          <End Role="Campo" Type="GestionZafraModel.Campo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Suministradores">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Campo">
+              <PropertyRef Name="Suministradoresid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKCampo53335">
+          <End Role="VariedadCana" Type="GestionZafraModel.VariedadCana" Multiplicity="1" />
+          <End Role="Campo" Type="GestionZafraModel.Campo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VariedadCana">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Campo">
+              <PropertyRef Name="VariedadCanaid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKDiarioOper822334">
+          <End Role="Campo" Type="GestionZafraModel.Campo" Multiplicity="1" />
+          <End Role="DiarioOperadorCombinadas" Type="GestionZafraModel.DiarioOperadorCombinadas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Campo">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="DiarioOperadorCombinadas">
+              <PropertyRef Name="Campoid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKPlanEquipo352056">
+          <End Role="CentrosRecepcion" Type="GestionZafraModel.CentrosRecepcion" Multiplicity="1" />
+          <End Role="PlanEquiposAgricZafra" Type="GestionZafraModel.PlanEquiposAgricZafra" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CentrosRecepcion">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="PlanEquiposAgricZafra">
+              <PropertyRef Name="CentrosRecepcionid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKPlanOperad22800">
+          <End Role="CentrosRecepcion" Type="GestionZafraModel.CentrosRecepcion" Multiplicity="1" />
+          <End Role="PlanOperadoresCombinadas" Type="GestionZafraModel.PlanOperadoresCombinadas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CentrosRecepcion">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="PlanOperadoresCombinadas">
+              <PropertyRef Name="CentrosRecepcionid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKDiarioEqui334875">
+          <End Role="Zafras" Type="GestionZafraModel.Zafras" Multiplicity="1" />
+          <End Role="DiarioEquiposZafra" Type="GestionZafraModel.DiarioEquiposZafra" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zafras">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="DiarioEquiposZafra">
+              <PropertyRef Name="Zafrasid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKDiarioEqui435805">
+          <End Role="PlanEquiposAgricZafra" Type="GestionZafraModel.PlanEquiposAgricZafra" Multiplicity="1" />
+          <End Role="DiarioEquiposZafra" Type="GestionZafraModel.DiarioEquiposZafra" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PlanEquiposAgricZafra">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="DiarioEquiposZafra">
+              <PropertyRef Name="PlanEquiposAgricZafraid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKDiarioEqui859692">
+          <End Role="Usuario" Type="GestionZafraModel.Usuario" Multiplicity="1" />
+          <End Role="DiarioEquiposZafra" Type="GestionZafraModel.DiarioEquiposZafra" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="DiarioEquiposZafra">
+              <PropertyRef Name="Usuarioid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKDiarioOper100899">
+          <End Role="PlanOperadoresCombinadas" Type="GestionZafraModel.PlanOperadoresCombinadas" Multiplicity="1" />
+          <End Role="DiarioOperadorCombinadas" Type="GestionZafraModel.DiarioOperadorCombinadas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PlanOperadoresCombinadas">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="DiarioOperadorCombinadas">
+              <PropertyRef Name="PlanOperadoresCombinadasid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKDiarioOper578327">
+          <End Role="EstadoEquipo" Type="GestionZafraModel.EstadoEquipo" Multiplicity="1" />
+          <End Role="DiarioOperadorCombinadas" Type="GestionZafraModel.DiarioOperadorCombinadas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EstadoEquipo">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="DiarioOperadorCombinadas">
+              <PropertyRef Name="EstadoEquipoid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKDiarioOper626817">
+          <End Role="Usuario" Type="GestionZafraModel.Usuario" Multiplicity="1" />
+          <End Role="DiarioOperadorCombinadas" Type="GestionZafraModel.DiarioOperadorCombinadas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="DiarioOperadorCombinadas">
+              <PropertyRef Name="Usuarioid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKDiarioOper897999">
+          <End Role="Zafras" Type="GestionZafraModel.Zafras" Multiplicity="1" />
+          <End Role="DiarioOperadorCombinadas" Type="GestionZafraModel.DiarioOperadorCombinadas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zafras">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="DiarioOperadorCombinadas">
+              <PropertyRef Name="Zafrasid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKOperadorCo455168">
+          <End Role="MarcasCombinadas" Type="GestionZafraModel.MarcasCombinadas" Multiplicity="1" />
+          <End Role="OperadorCombinada" Type="GestionZafraModel.OperadorCombinada" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MarcasCombinadas">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="OperadorCombinada">
+              <PropertyRef Name="MarcasCombinadasid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKOperadorCo809279">
+          <End Role="PelotonCombinadas" Type="GestionZafraModel.PelotonCombinadas" Multiplicity="1" />
+          <End Role="OperadorCombinada" Type="GestionZafraModel.OperadorCombinada" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PelotonCombinadas">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="OperadorCombinada">
+              <PropertyRef Name="PelotonCombinadasid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKPlanOperad482811">
+          <End Role="OperadorCombinada" Type="GestionZafraModel.OperadorCombinada" Multiplicity="1" />
+          <End Role="PlanOperadoresCombinadas" Type="GestionZafraModel.PlanOperadoresCombinadas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OperadorCombinada">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="PlanOperadoresCombinadas">
+              <PropertyRef Name="OperadorCombinadaid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKParametros205676">
+          <End Role="Zafras" Type="GestionZafraModel.Zafras" Multiplicity="1" />
+          <End Role="ParametrosGenerales" Type="GestionZafraModel.ParametrosGenerales" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zafras">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ParametrosGenerales">
+              <PropertyRef Name="zafraAct" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKParqueEqui172425">
+          <End Role="Suministradores" Type="GestionZafraModel.Suministradores" Multiplicity="1" />
+          <End Role="ParqueEquipos" Type="GestionZafraModel.ParqueEquipos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Suministradores">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ParqueEquipos">
+              <PropertyRef Name="Suministradoresid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKParqueEqui70865">
+          <End Role="TipoEquipos" Type="GestionZafraModel.TipoEquipos" Multiplicity="1" />
+          <End Role="ParqueEquipos" Type="GestionZafraModel.ParqueEquipos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoEquipos">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ParqueEquipos">
+              <PropertyRef Name="TipoEquiposid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKPlanEquipo297757">
+          <End Role="ParqueEquipos" Type="GestionZafraModel.ParqueEquipos" Multiplicity="1" />
+          <End Role="PlanEquiposAgricZafra" Type="GestionZafraModel.PlanEquiposAgricZafra" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ParqueEquipos">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="PlanEquiposAgricZafra">
+              <PropertyRef Name="ParqueEquiposid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKPelotonCom54014">
+          <End Role="Suministradores" Type="GestionZafraModel.Suministradores" Multiplicity="1" />
+          <End Role="PelotonCombinadas" Type="GestionZafraModel.PelotonCombinadas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Suministradores">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="PelotonCombinadas">
+              <PropertyRef Name="Suministradoresid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKPlanEquipo587695">
+          <End Role="Zafras" Type="GestionZafraModel.Zafras" Multiplicity="1" />
+          <End Role="PlanEquiposAgricZafra" Type="GestionZafraModel.PlanEquiposAgricZafra" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zafras">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="PlanEquiposAgricZafra">
+              <PropertyRef Name="Zafrasid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKPlanOperad741560">
+          <End Role="Zafras" Type="GestionZafraModel.Zafras" Multiplicity="1" />
+          <End Role="PlanOperadoresCombinadas" Type="GestionZafraModel.PlanOperadoresCombinadas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zafras">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="PlanOperadoresCombinadas">
+              <PropertyRef Name="Zafrasid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKUsuario38509">
+          <End Role="Rol" Type="GestionZafraModel.Rol" Multiplicity="1" />
+          <End Role="Usuario" Type="GestionZafraModel.Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rol">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Usuario">
+              <PropertyRef Name="Rolid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKSuministra562195">
+          <End Role="TiposSectorPropiedad" Type="GestionZafraModel.TiposSectorPropiedad" Multiplicity="1" />
+          <End Role="Suministradores" Type="GestionZafraModel.Suministradores" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TiposSectorPropiedad">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Suministradores">
+              <PropertyRef Name="TiposSectorPropiedadid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="GestionZafraModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="Campo">
+            <EntityTypeMapping TypeName="GestionZafraModel.Campo">
+              <MappingFragment StoreEntitySet="Campo">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Suministradoresid" ColumnName="Suministradoresid" />
+                <ScalarProperty Name="VariedadCanaid" ColumnName="VariedadCanaid" />
+                <ScalarProperty Name="cepa" ColumnName="cepa" />
+                <ScalarProperty Name="cantCanaVerde" ColumnName="cantCanaVerde" />
+                <ScalarProperty Name="cantCanaQuemada" ColumnName="cantCanaQuemada" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CentrosRecepcion">
+            <EntityTypeMapping TypeName="GestionZafraModel.CentrosRecepcion">
+              <MappingFragment StoreEntitySet="CentrosRecepcion">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombreCentroRecepcion" ColumnName="nombreCentroRecepcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DiarioEquiposZafra">
+            <EntityTypeMapping TypeName="GestionZafraModel.DiarioEquiposZafra">
+              <MappingFragment StoreEntitySet="DiarioEquiposZafra">
+                <ScalarProperty Name="PlanEquiposAgricZafraid" ColumnName="PlanEquiposAgricZafraid" />
+                <ScalarProperty Name="fecha" ColumnName="fecha" />
+                <ScalarProperty Name="arrobasTiradas" ColumnName="arrobasTiradas" />
+                <ScalarProperty Name="parqueParado" ColumnName="parqueParado" />
+                <ScalarProperty Name="Usuarioid" ColumnName="Usuarioid" />
+                <ScalarProperty Name="Zafrasid" ColumnName="Zafrasid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DiarioOperadorCombinadas">
+            <EntityTypeMapping TypeName="GestionZafraModel.DiarioOperadorCombinadas">
+              <MappingFragment StoreEntitySet="DiarioOperadorCombinadas">
+                <ScalarProperty Name="PlanOperadoresCombinadasid" ColumnName="PlanOperadoresCombinadasid" />
+                <ScalarProperty Name="fecha" ColumnName="fecha" />
+                <ScalarProperty Name="Campoid" ColumnName="Campoid" />
+                <ScalarProperty Name="EstadoEquipoid" ColumnName="EstadoEquipoid" />
+                <ScalarProperty Name="cantQuemada" ColumnName="cantQuemada" />
+                <ScalarProperty Name="cantQuemadaProgram" ColumnName="cantQuemadaProgram" />
+                <ScalarProperty Name="cantVerde" ColumnName="cantVerde" />
+                <ScalarProperty Name="Usuarioid" ColumnName="Usuarioid" />
+                <ScalarProperty Name="Zafrasid" ColumnName="Zafrasid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EstadoEquipo">
+            <EntityTypeMapping TypeName="GestionZafraModel.EstadoEquipo">
+              <MappingFragment StoreEntitySet="EstadoEquipo">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombreEstado" ColumnName="nombreEstado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MarcasCombinadas">
+            <EntityTypeMapping TypeName="GestionZafraModel.MarcasCombinadas">
+              <MappingFragment StoreEntitySet="MarcasCombinadas">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombreCombinada" ColumnName="nombreCombinada" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OperadorCombinada">
+            <EntityTypeMapping TypeName="GestionZafraModel.OperadorCombinada">
+              <MappingFragment StoreEntitySet="OperadorCombinada">
+                <ScalarProperty Name="activo" ColumnName="activo" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombreOperador" ColumnName="nombreOperador" />
+                <ScalarProperty Name="MarcasCombinadasid" ColumnName="MarcasCombinadasid" />
+                <ScalarProperty Name="PelotonCombinadasid" ColumnName="PelotonCombinadasid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ParametrosGenerales">
+            <EntityTypeMapping TypeName="GestionZafraModel.ParametrosGenerales">
+              <MappingFragment StoreEntitySet="ParametrosGenerales">
+                <ScalarProperty Name="codigoEmpresa" ColumnName="codigoEmpresa" />
+                <ScalarProperty Name="nombreEmpresa" ColumnName="nombreEmpresa" />
+                <ScalarProperty Name="fechaActual" ColumnName="fechaActual" />
+                <ScalarProperty Name="zafraAct" ColumnName="zafraAct" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ParqueEquipos">
+            <EntityTypeMapping TypeName="GestionZafraModel.ParqueEquipos">
+              <MappingFragment StoreEntitySet="ParqueEquipos">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Suministradoresid" ColumnName="Suministradoresid" />
+                <ScalarProperty Name="TipoEquiposid" ColumnName="TipoEquiposid" />
+                <ScalarProperty Name="cantidadEquipos" ColumnName="cantidadEquipos" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PelotonCombinadas">
+            <EntityTypeMapping TypeName="GestionZafraModel.PelotonCombinadas">
+              <MappingFragment StoreEntitySet="PelotonCombinadas">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Suministradoresid" ColumnName="Suministradoresid" />
+                <ScalarProperty Name="parque" ColumnName="parque" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PlanEquiposAgricZafra">
+            <EntityTypeMapping TypeName="GestionZafraModel.PlanEquiposAgricZafra">
+              <MappingFragment StoreEntitySet="PlanEquiposAgricZafra">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ParqueEquiposid" ColumnName="ParqueEquiposid" />
+                <ScalarProperty Name="parqueAsignado" ColumnName="parqueAsignado" />
+                <ScalarProperty Name="tareaDiaria" ColumnName="tareaDiaria" />
+                <ScalarProperty Name="CentrosRecepcionid" ColumnName="CentrosRecepcionid" />
+                <ScalarProperty Name="Zafrasid" ColumnName="Zafrasid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PlanOperadoresCombinadas">
+            <EntityTypeMapping TypeName="GestionZafraModel.PlanOperadoresCombinadas">
+              <MappingFragment StoreEntitySet="PlanOperadoresCombinadas">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="OperadorCombinadaid" ColumnName="OperadorCombinadaid" />
+                <ScalarProperty Name="tareaDiaria" ColumnName="tareaDiaria" />
+                <ScalarProperty Name="CentrosRecepcionid" ColumnName="CentrosRecepcionid" />
+                <ScalarProperty Name="Zafrasid" ColumnName="Zafrasid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Rol">
+            <EntityTypeMapping TypeName="GestionZafraModel.Rol">
+              <MappingFragment StoreEntitySet="Rol">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="descripcionRol" ColumnName="descripcionRol" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Suministradores">
+            <EntityTypeMapping TypeName="GestionZafraModel.Suministradores">
+              <MappingFragment StoreEntitySet="Suministradores">
+                <ScalarProperty Name="activo" ColumnName="activo" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="TiposSectorPropiedadid" ColumnName="TiposSectorPropiedadid" />
+                <ScalarProperty Name="nombreSuministrador" ColumnName="nombreSuministrador" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoEquipos">
+            <EntityTypeMapping TypeName="GestionZafraModel.TipoEquipos">
+              <MappingFragment StoreEntitySet="TipoEquipos">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="descripcionEquipo" ColumnName="descripcionEquipo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TiposSectorPropiedad">
+            <EntityTypeMapping TypeName="GestionZafraModel.TiposSectorPropiedad">
+              <MappingFragment StoreEntitySet="TiposSectorPropiedad">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombreTipoSector" ColumnName="nombreTipoSector" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Usuario">
+            <EntityTypeMapping TypeName="GestionZafraModel.Usuario">
+              <MappingFragment StoreEntitySet="Usuario">
+                <ScalarProperty Name="activo" ColumnName="activo" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombreUsuario" ColumnName="nombreUsuario" />
+                <ScalarProperty Name="Rolid" ColumnName="Rolid" />
+                <ScalarProperty Name="pass" ColumnName="pass" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VariedadCana">
+            <EntityTypeMapping TypeName="GestionZafraModel.VariedadCana">
+              <MappingFragment StoreEntitySet="VariedadCana">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombreVariedad" ColumnName="nombreVariedad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Zafras">
+            <EntityTypeMapping TypeName="GestionZafraModel.Zafras">
+              <MappingFragment StoreEntitySet="Zafras">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="descripcionZafra" ColumnName="descripcionZafra" />
+                <ScalarProperty Name="fechaInicio" ColumnName="fechaInicio" />
+                <ScalarProperty Name="fechaFin" ColumnName="fechaFin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

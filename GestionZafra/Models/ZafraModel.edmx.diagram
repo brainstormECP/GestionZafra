@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6b44ad65d8fe4aeab8372e3213b0db49" Name="Diagram1">
+        <EntityTypeShape EntityType="GestionZafraModel.Campo" Width="1.5" PointX="3.75" PointY="33.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GestionZafraModel.CentrosRecepcion" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GestionZafraModel.DiarioEquiposZafra" Width="1.5" PointX="3" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GestionZafraModel.DiarioOperadorCombinadas" Width="1.5" PointX="6" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GestionZafraModel.EstadoEquipo" Width="1.5" PointX="3.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GestionZafraModel.MarcasCombinadas" Width="1.5" PointX="1.5" PointY="41.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GestionZafraModel.OperadorCombinada" Width="1.5" PointX="0.75" PointY="37.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GestionZafraModel.ParametrosGenerales" Width="1.5" PointX="3" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GestionZafraModel.ParqueEquipos" Width="1.5" PointX="0.75" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="GestionZafraModel.PelotonCombinadas" Width="1.5" PointX="1.5" PointY="44.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GestionZafraModel.PlanEquiposAgricZafra" Width="1.5" PointX="3" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GestionZafraModel.PlanOperadoresCombinadas" Width="1.5" PointX="3" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GestionZafraModel.Rol" Width="1.5" PointX="1.5" PointY="31.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GestionZafraModel.Suministradores" Width="1.5" PointX="1.5" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GestionZafraModel.TipoEquipos" Width="1.5" PointX="1.5" PointY="28" IsExpanded="true" />
+        <EntityTypeShape EntityType="GestionZafraModel.TiposSectorPropiedad" Width="1.5" PointX="1.5" PointY="25.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GestionZafraModel.Usuario" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GestionZafraModel.VariedadCana" Width="1.5" PointX="1.5" PointY="34.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GestionZafraModel.Zafras" Width="1.5" PointX="0.75" PointY="10.5" IsExpanded="true" />
+        <AssociationConnector Association="GestionZafraModel.FKCampo161005" ManuallyRouted="false" />
+        <AssociationConnector Association="GestionZafraModel.FKCampo53335" ManuallyRouted="false" />
+        <AssociationConnector Association="GestionZafraModel.FKDiarioOper822334" ManuallyRouted="false" />
+        <AssociationConnector Association="GestionZafraModel.FKPlanEquipo352056" ManuallyRouted="false" />
+        <AssociationConnector Association="GestionZafraModel.FKPlanOperad22800" ManuallyRouted="false" />
+        <AssociationConnector Association="GestionZafraModel.FKDiarioEqui334875" ManuallyRouted="false" />
+        <AssociationConnector Association="GestionZafraModel.FKDiarioEqui435805" ManuallyRouted="false" />
+        <AssociationConnector Association="GestionZafraModel.FKDiarioEqui859692" ManuallyRouted="false" />
+        <AssociationConnector Association="GestionZafraModel.FKDiarioOper100899" ManuallyRouted="false" />
+        <AssociationConnector Association="GestionZafraModel.FKDiarioOper578327" ManuallyRouted="false" />
+        <AssociationConnector Association="GestionZafraModel.FKDiarioOper626817" ManuallyRouted="false" />
+        <AssociationConnector Association="GestionZafraModel.FKDiarioOper897999" ManuallyRouted="false" />
+        <AssociationConnector Association="GestionZafraModel.FKOperadorCo455168" ManuallyRouted="false" />
+        <AssociationConnector Association="GestionZafraModel.FKOperadorCo809279" ManuallyRouted="false" />
+        <AssociationConnector Association="GestionZafraModel.FKPlanOperad482811" ManuallyRouted="false" />
+        <AssociationConnector Association="GestionZafraModel.FKParametros205676" ManuallyRouted="false" />
+        <AssociationConnector Association="GestionZafraModel.FKParqueEqui172425" ManuallyRouted="false" />
+        <AssociationConnector Association="GestionZafraModel.FKParqueEqui70865" ManuallyRouted="false" />
+        <AssociationConnector Association="GestionZafraModel.FKPlanEquipo297757" ManuallyRouted="false" />
+        <AssociationConnector Association="GestionZafraModel.FKPelotonCom54014" ManuallyRouted="false" />
+        <AssociationConnector Association="GestionZafraModel.FKPlanEquipo587695" ManuallyRouted="false" />
+        <AssociationConnector Association="GestionZafraModel.FKPlanOperad741560" ManuallyRouted="false" />
+        <AssociationConnector Association="GestionZafraModel.FKUsuario38509" ManuallyRouted="false" />
+        <AssociationConnector Association="GestionZafraModel.FKSuministra562195" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
