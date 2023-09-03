@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using DevExpress.XtraReports.UI;
+//using DevExpress.XtraReports.UI;
 using GestionZafra.Filters;
 using GestionZafra.Models;
-using GestionZafra.Reports;
+//using GestionZafra.Reports;
 
 namespace GestionZafra.Controllers
 {
@@ -14,7 +14,7 @@ namespace GestionZafra.Controllers
     //[LoginFilter(Rol = "Operador")]
     public class ReportesController : Controller
     {
-        static XtraReport report;
+        //static XtraReport report;
 
         private Entities db = new Entities();
 
@@ -27,13 +27,14 @@ namespace GestionZafra.Controllers
 
         public ActionResult ReportViewerPartial()
         {
-            ViewData["Report"] = report;
+            //ViewData["Report"] = report;
             return PartialView("ReportViewerPartial");
         }
 
         public ActionResult ExportReportViewer()
         {
-            return DevExpress.Web.Mvc.ReportViewerExtension.ExportTo(report);
+            //return DevExpress.Web.Mvc.ReportViewerExtension.ExportTo(report);
+            throw new NotImplementedException();
         }
 
         //fin de basico
@@ -57,9 +58,9 @@ namespace GestionZafra.Controllers
                 var fechaInicio = model.FechaInicio ?? fechaActual;
                 var fechaFin = model.FechaFin ?? fechaActual;
 
-                var r = new CanaxEquipo() { fechaInicio = { Value = fechaInicio }, fechaFin = { Value = fechaFin }, Zafra = { Value = zafraid } };
-                r.CargarDatos();
-                report = r;
+                //var r = new CanaxEquipo() { fechaInicio = { Value = fechaInicio }, fechaFin = { Value = fechaFin }, Zafra = { Value = zafraid } };
+                //r.CargarDatos();
+                //report = r;
                 return View("Plantilla");
             }
             return View(model);
@@ -82,9 +83,9 @@ namespace GestionZafra.Controllers
                 var fechaInicio = model.FechaInicio ?? fechaActual;
                 var fechaFin = model.FechaFin ?? fechaActual;
 
-                var r = new CanaxOperador() { fechaInicio = { Value = fechaInicio }, fechaFin = { Value = fechaFin }, Zafra = { Value = zafraid } };
-                r.CargarDatos();
-                report = r;
+                //var r = new CanaxOperador() { fechaInicio = { Value = fechaInicio }, fechaFin = { Value = fechaFin }, Zafra = { Value = zafraid } };
+                //r.CargarDatos();
+                //report = r;
                 return View("Plantilla");
             }
             return View(model);
@@ -108,9 +109,9 @@ namespace GestionZafra.Controllers
                 var fechaFin = model.FechaFin ?? fechaActual;
 
 
-                var r = new RecibidasCentrosRecepcion() { fechaInicio = { Value = fechaInicio }, fechaFin = { Value = fechaFin }, Zafra = { Value = zafraid } };
-                r.CargarDatos();
-                report = r;
+                //var r = new RecibidasCentrosRecepcion() { fechaInicio = { Value = fechaInicio }, fechaFin = { Value = fechaFin }, Zafra = { Value = zafraid } };
+                //r.CargarDatos();
+                //report = r;
                 return View("Plantilla");
             }
             return View(model);
@@ -119,36 +120,36 @@ namespace GestionZafra.Controllers
         public ActionResult UnidadesIncumplidoras()
         {
             var zafraid = db.ParametrosGenerales.First().zafraAct;
-            var r = new UnidadesIncumplidorasCorte() { Zafra = { Value = zafraid } };
-            r.CargarDatos();
-            report = r;
+            //var r = new UnidadesIncumplidorasCorte() { Zafra = { Value = zafraid } };
+            //r.CargarDatos();
+            //report = r;
             return View("Plantilla");
         }
 
         public ActionResult UnidadesCumplidoras()
         {
             var zafraid = db.ParametrosGenerales.First().zafraAct;
-            var r = new UnidadesCumplidorasCorte() { Zafra = { Value = zafraid } };
-            r.CargarDatos();
-            report = r;
+            //var r = new UnidadesCumplidorasCorte() { Zafra = { Value = zafraid } };
+            //r.CargarDatos();
+            //report = r;
             return View("Plantilla");
         }
 
         public ActionResult OperadoresIncumplidores()
         {
             var zafraid = db.ParametrosGenerales.First().zafraAct;
-            var r = new OperadoresIncumplidores() { Zafra = { Value = zafraid } };
-            r.CargarDatos();
-            report = r;
+            //var r = new OperadoresIncumplidores() { Zafra = { Value = zafraid } };
+            //r.CargarDatos();
+            //report = r;
             return View("Plantilla");
         }
 
         public ActionResult OperadoresCumplidores()
         {
             var zafraid = db.ParametrosGenerales.First().zafraAct;
-            var r = new OperadoresCumplidores() { Zafra = { Value = zafraid } };
-            r.CargarDatos();
-            report = r;
+            //var r = new OperadoresCumplidores() { Zafra = { Value = zafraid } };
+            //r.CargarDatos();
+            //report = r;
             return View("Plantilla");
         }
 
@@ -156,23 +157,23 @@ namespace GestionZafra.Controllers
         {
             var parametros = db.ParametrosGenerales.First();
             var zafraid = parametros.zafraAct;
-            var r = new EquiposParados() { Zafra = { Value = zafraid }, FechaActual = { Value = parametros.fechaActual } };
-            r.CargarDatos();
-            report = r;
+            //var r = new EquiposParados() { Zafra = { Value = zafraid }, FechaActual = { Value = parametros.fechaActual } };
+            //r.CargarDatos();
+            //report = r;
             return View("Plantilla");
         }
 
         public ActionResult EquiposPorSuministrador()
         {
-            var r = new EquiposPorSuministrador();
-            report = r;
+            //var r = new EquiposPorSuministrador();
+            //report = r;
             return View("Plantilla");
         }
 
         public ActionResult Campos()
         {
-            var r = new Campos();
-            report = r;
+            //var r = new Campos();
+            //report = r;
             return View("Plantilla");
         }
 
@@ -180,9 +181,9 @@ namespace GestionZafra.Controllers
         {
             var parametros = db.ParametrosGenerales.First();
             var zafraid = parametros.zafraAct;
-            var r = new OperadoresParados() { Zafra = { Value = zafraid }, FechaActual = { Value = parametros.fechaActual } };
-            r.CargarDatos();
-            report = r;
+            //var r = new OperadoresParados() { Zafra = { Value = zafraid }, FechaActual = { Value = parametros.fechaActual } };
+            //r.CargarDatos();
+            //report = r;
             return View("Plantilla");
         }
 
@@ -220,67 +221,67 @@ namespace GestionZafra.Controllers
 
                 var rep = model.Reporte;
 
-                switch (rep)
-                {
-                    case "1":
-                        {
-                            var r = new CanaxEquipo() { fechaInicio = { Value = fechaInicio }, fechaFin = { Value = fechaFin }, Zafra = { Value = model.Zafraid } };
-                            r.CargarDatos();
-                            report = r;
-                        }
-                        break;
-                    case "2":
-                        {
-                            var r = new CanaxOperador() { fechaInicio = { Value = fechaInicio }, fechaFin = { Value = fechaFin }, Zafra = { Value = model.Zafraid } };
-                            r.CargarDatos();
-                            report = r;
-                        }
-                        break;
+                //switch (rep)
+                //{
+                //    case "1":
+                //        {
+                //            var r = new CanaxEquipo() { fechaInicio = { Value = fechaInicio }, fechaFin = { Value = fechaFin }, Zafra = { Value = model.Zafraid } };
+                //            r.CargarDatos();
+                //            report = r;
+                //        }
+                //        break;
+                //    case "2":
+                //        {
+                //            var r = new CanaxOperador() { fechaInicio = { Value = fechaInicio }, fechaFin = { Value = fechaFin }, Zafra = { Value = model.Zafraid } };
+                //            r.CargarDatos();
+                //            report = r;
+                //        }
+                //        break;
 
-                    case "3":
-                        {
-                            var r = new RecibidasCentrosRecepcion() { fechaInicio = { Value = fechaInicio }, fechaFin = { Value = fechaFin }, Zafra = { Value = model.Zafraid } };
-                            r.CargarDatos();
-                            report = r;
-                        }
-                        break;
-                    case "4":
-                        {
-                            var r = new UnidadesIncumplidorasCorte() { Zafra = { Value = model.Zafraid } };
-                            r.CargarDatos();
-                            report = r;
-                        }
-                        break;
-                    case "5":
-                        {
-                            var r = new UnidadesCumplidorasCorte() { Zafra = { Value = model.Zafraid } };
-                            r.CargarDatos();
-                            report = r;
-                        }
-                        break;
-                    case "6":
-                        {
-                            var r = new OperadoresIncumplidores() { Zafra = { Value = model.Zafraid } };
-                            r.CargarDatos();
-                            report = r;
-                        }
-                        break;
-                    case "7":
-                        {
-                            var r = new OperadoresCumplidores() { Zafra = { Value = model.Zafraid } };
-                            r.CargarDatos();
-                            report = r;
-                        }
-                        break;
-                    case "8":
-                        {
-                            var r = new EquiposParados() { Zafra = { Value = model.Zafraid }, FechaActual = { Value = fechaInicio } };
+                //    case "3":
+                //        {
+                //            var r = new RecibidasCentrosRecepcion() { fechaInicio = { Value = fechaInicio }, fechaFin = { Value = fechaFin }, Zafra = { Value = model.Zafraid } };
+                //            r.CargarDatos();
+                //            report = r;
+                //        }
+                //        break;
+                //    case "4":
+                //        {
+                //            var r = new UnidadesIncumplidorasCorte() { Zafra = { Value = model.Zafraid } };
+                //            r.CargarDatos();
+                //            report = r;
+                //        }
+                //        break;
+                //    case "5":
+                //        {
+                //            var r = new UnidadesCumplidorasCorte() { Zafra = { Value = model.Zafraid } };
+                //            r.CargarDatos();
+                //            report = r;
+                //        }
+                //        break;
+                //    case "6":
+                //        {
+                //            var r = new OperadoresIncumplidores() { Zafra = { Value = model.Zafraid } };
+                //            r.CargarDatos();
+                //            report = r;
+                //        }
+                //        break;
+                //    case "7":
+                //        {
+                //            var r = new OperadoresCumplidores() { Zafra = { Value = model.Zafraid } };
+                //            r.CargarDatos();
+                //            report = r;
+                //        }
+                //        break;
+                //    case "8":
+                //        {
+                //            var r = new EquiposParados() { Zafra = { Value = model.Zafraid }, FechaActual = { Value = fechaInicio } };
 
-                            r.CargarDatos();
-                            report = r;
-                        }
-                        break;
-                }
+                //            r.CargarDatos();
+                //            report = r;
+                //        }
+                //        break;
+                //}
                 return View("Plantilla");
             }
             ViewBag.Title = "Seleccione los datos del Reporte";

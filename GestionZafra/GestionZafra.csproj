@@ -20,6 +20,8 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,28 +43,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.Charts.v12.2.Core, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Data.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Office.v12.2.Core, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.PivotGrid.v12.2.Core, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Printing.v12.2.Core, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.RichEdit.v12.2.Core, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.SpellChecker.v12.2.Core, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Utils.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Web.ASPxHtmlEditor.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Web.ASPxPivotGrid.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Web.ASPxScheduler.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Web.ASPxSpellChecker.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Web.ASPxThemes.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Web.ASPxTreeList.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Web.Mvc.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Web.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraCharts.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraCharts.v12.2.Web, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraPivotGrid.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraReports.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraReports.v12.2.Web, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraScheduler.v12.2.Core, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -293,114 +273,6 @@
       <DependentUpon>ZafraModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reports\Campos.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\Campos.designer.cs">
-      <DependentUpon>Campos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\CanaxOperador.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\CanaxOperador.designer.cs">
-      <DependentUpon>CanaxOperador.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\OperadoresParados.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\OperadoresParados.designer.cs">
-      <DependentUpon>OperadoresParados.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\SubReportEquiposParados.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\SubReportEquiposParados.designer.cs">
-      <DependentUpon>SubReportEquiposParados.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\EquiposParados.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\EquiposParados.designer.cs">
-      <DependentUpon>EquiposParados.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\OperadoresCumplidores.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\OperadoresCumplidores.designer.cs">
-      <DependentUpon>OperadoresCumplidores.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\OperadoresIncumplidores.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\OperadoresIncumplidores.designer.cs">
-      <DependentUpon>OperadoresIncumplidores.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\UnidadesCumplidorasCorte.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\UnidadesCumplidorasCorte.designer.cs">
-      <DependentUpon>UnidadesCumplidorasCorte.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\UnidadesIncumplidorasCorte.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\UnidadesIncumplidorasCorte.designer.cs">
-      <DependentUpon>UnidadesIncumplidorasCorte.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\SubReportOperadores.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\SubReportOperadores.designer.cs">
-      <DependentUpon>SubReportOperadores.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\SubReportTipoEqExitente.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\SubReportTipoEqExitente.designer.cs">
-      <DependentUpon>SubReportTipoEqExitente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\EquiposPorSuministrador.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\EquiposPorSuministrador.designer.cs">
-      <DependentUpon>EquiposPorSuministrador.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\RecibidasCentrosRecepcion.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\RecibidasCentrosRecepcion.designer.cs">
-      <DependentUpon>RecibidasCentrosRecepcion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\CortadaPorOperador.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\CortadaPorOperador.designer.cs">
-      <DependentUpon>CortadaPorOperador.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\CanaxEquipo.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\CanaxEquipo.designer.cs">
-      <DependentUpon>CanaxEquipo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\SubReportEqZafra.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\SubReportEqZafra.designer.cs">
-      <DependentUpon>SubReportEqZafra.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\DiarioCentrosRecepcion.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\DiarioCentrosRecepcion.designer.cs">
-      <DependentUpon>DiarioCentrosRecepcion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\PlantillaDiario.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\PlantillaDiario.designer.cs">
-      <DependentUpon>PlantillaDiario.cs</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\GestionZafra.mdf" />
@@ -759,69 +631,14 @@
     <Content Include="Views\Reportes\CanaPorOperador.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Properties\licenses.licx" />
-    <EmbeddedResource Include="Reports\Campos.resx">
-      <DependentUpon>Campos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\CanaxOperador.resx">
-      <DependentUpon>CanaxOperador.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\OperadoresParados.resx">
-      <DependentUpon>OperadoresParados.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\SubReportEquiposParados.resx">
-      <DependentUpon>SubReportEquiposParados.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\EquiposParados.resx">
-      <DependentUpon>EquiposParados.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\OperadoresCumplidores.resx">
-      <DependentUpon>OperadoresCumplidores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\OperadoresIncumplidores.resx">
-      <DependentUpon>OperadoresIncumplidores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\UnidadesCumplidorasCorte.resx">
-      <DependentUpon>UnidadesCumplidorasCorte.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\UnidadesIncumplidorasCorte.resx">
-      <DependentUpon>UnidadesIncumplidorasCorte.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\SubReportOperadores.resx">
-      <DependentUpon>SubReportOperadores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\SubReportTipoEqExitente.resx">
-      <DependentUpon>SubReportTipoEqExitente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\EquiposPorSuministrador.resx">
-      <DependentUpon>EquiposPorSuministrador.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\RecibidasCentrosRecepcion.resx">
-      <DependentUpon>RecibidasCentrosRecepcion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\CortadaPorOperador.resx">
-      <DependentUpon>CortadaPorOperador.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\CanaxEquipo.resx">
-      <DependentUpon>CanaxEquipo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\SubReportEqZafra.resx">
-      <DependentUpon>SubReportEqZafra.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\DiarioCentrosRecepcion.resx">
-      <DependentUpon>DiarioCentrosRecepcion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\PlantillaDiario.resx">
-      <DependentUpon>PlantillaDiario.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Reports\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
